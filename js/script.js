@@ -1,17 +1,39 @@
 // Esperar pelo carregamento do DOM
 document.addEventListener("DOMContentLoaded", function () {
+  // Suprimir erros de console não críticos relacionados a armazenamento
+  const originalConsoleError = console.error;
+  console.error = function () {
+    // Não registrar erros de armazenamento do iframe
+    if (
+      arguments[0] &&
+      typeof arguments[0] === "object" &&
+      arguments[0].message &&
+      arguments[0].message.includes("Access to storage is not allowed")
+    ) {
+      return;
+    }
+    originalConsoleError.apply(console, arguments);
+  };
+
   // Inicializar AOS (Animate On Scroll)
   AOS.init({
     duration: 800,
     easing: "ease-in-out",
     once: true,
     mirror: false,
-    disable: "mobile",
+    disable: window.innerWidth < 768 ? true : false, // Desabilitar em dispositivos móveis pequenos
+    startEvent: "DOMContentLoaded", // Iniciar mais cedo
+    offset: 120, // Reduzir offset para iniciar animações mais cedo
   });
 
   // Refresh AOS ao redimensionar a janela
   window.addEventListener("resize", function () {
-    AOS.refresh();
+    // Desabilitar em dispositivos móveis para melhorar performance
+    if (window.innerWidth < 768) {
+      AOS.refreshHard(); // Força refresh completo
+    } else {
+      AOS.refresh();
+    }
   });
 
   // Variáveis de elementos principais
