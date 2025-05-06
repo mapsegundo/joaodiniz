@@ -1,71 +1,93 @@
 # Site Dr. João Diniz - Medicina do Esporte
 
-Site profissional moderno e otimizado para o Dr. João Diniz, médico especialista em medicina do esporte e transformação corporal.
+![Logo Dr. João Diniz](img/logo-dr-joao-diniz.png)
+
+Site profissional para o Dr. João Diniz, médico especialista em medicina do esporte, emagrecimento, hipertrofia e rejuvenescimento masculino.
 
 ## Visão Geral
 
-O site foi desenvolvido para apresentar os serviços e a experiência do Dr. João Diniz de forma moderna, responsiva e otimizada para conversão de visitantes em pacientes. O design é sofisticado, com elementos visuais impactantes e uma estrutura que facilita a navegação.
+Este site foi desenvolvido como landing page de alta conversão para o Dr. João Diniz, apresentando seus serviços de consultoria médica especializada em transformação corporal. O design é moderno, responsivo e otimizado para gerar leads e agendamentos de consultas.
 
 ## Tecnologias Utilizadas
 
-- HTML5
-- CSS3 (com variáveis CSS e Flexbox/Grid)
-- JavaScript puro
-- Design totalmente responsivo
-- Otimizado para SEO
+- HTML5 semântico
+- CSS3 (com variáveis CSS, Flexbox e Grid)
+- JavaScript vanilla para interações
+- FontAwesome para ícones
+- Google Fonts (Montserrat)
+- Design totalmente responsivo (mobile-first)
+- Otimizado para SEO e performance
 - Compatível com todos os navegadores modernos
 
 ## Estrutura do Site
 
-O site conta com as seguintes seções:
+O site está organizado nas seguintes seções:
 
-1. **Hero** - Apresentação principal do Dr. João Diniz
-2. **Sobre** - História e credenciais profissionais
-3. **Diferenciais** - Equipe multidisciplinar (médico, nutricionista, treinador)
-4. **Números** - Estatísticas de resultados e reconhecimento
-5. **Planos** - Opções de serviços oferecidos (Ultra Men, Consultoria Black, Plano Individual)
-6. **Depoimentos** - Resultados reais com fotos antes e depois
-7. **FAQ** - Perguntas frequentes
-8. **Contato** - Formulário e informações de contato
+1. **Header** - Navegação principal e CTA de agendamento
+2. **Início** - Hero section com proposta de valor principal
+3. **Sobre** - História profissional e credenciais do Dr. João Diniz
+4. **Diferenciais** - Equipe multidisciplinar (médico, nutricionista, treinador)
+5. **Números** - Estatísticas e resultados comprovados
+6. **Planos** - Serviços oferecidos (Ultra Men, Consultoria Black, Plano Individual)
+7. **FAQ** - Perguntas frequentes e respostas
+8. **Contato** - Informações de contato, localização e redes sociais
+9. **Footer** - Links rápidos, contato e credenciais
 
 ## Recursos Interativos
 
-- Menu mobile responsivo
-- Accordion de FAQ
-- Rolagem suave para links de âncora
+- Menu mobile responsivo com animação
+- Sistema de accordion para FAQ
+- Rolagem suave para navegação interna
 - Botão de "Voltar ao topo"
-- Botão flutuante de WhatsApp
-- Formulário de contato validado
-- Animações sutis de elementos
+- Botão flutuante de WhatsApp para contato rápido
+- Integração com Google Maps
+- Links diretos para WhatsApp com mensagens pré-formatadas
 
 ## Identidade Visual
 
-O site utiliza uma paleta de cores moderna e profissional:
+A identidade visual segue um padrão profissional da área médica:
 
 - Cor principal: Verde turquesa (#14b8a6)
 - Cor secundária: Azul (#2563eb)
-- Fundo claro: Branco (#ffffff)
-- Fundo escuro: Preto profundo (#020617)
-- Textos escuros: Quase preto (#0f172a)
-- Textos claros: Quase branco (#f8fafc)
+- Gradientes sutis para destacar elementos importantes
+- Tipografia principal: Montserrat (300 a 800)
+- Ícones: FontAwesome 6.4.0
 
-## Instalação e Uso
+## Estrutura de Arquivos
 
-1. Clone este repositório
+```
+/
+├── index.html          # Arquivo principal
+├── css/
+│   ├── style.css       # Estilos principais
+│   └── responsive.css  # Estilos responsivos
+├── js/
+│   └── script.js       # Funcionalidades JavaScript
+├── img/                # Imagens e recursos visuais
+└── README.md           # Este arquivo
+```
+
+## Instalação e Desenvolvimento
+
+1. Clone este repositório:
+   ```bash
+   git clone https://github.com/mapsegundo/joaodiniz.git
+   ```
 2. Abra o arquivo `index.html` em qualquer navegador moderno
-3. Para desenvolvimento, edite os arquivos CSS na pasta `/css` e os scripts na pasta `/js`
+3. Para desenvolvimento, edite os arquivos CSS na pasta `/css` e os scripts em `/js`
 
-## Otimizações Futuras
+## Melhorias Futuras
 
 - Implementar backend para processamento do formulário de contato
-- Adicionar mais depoimentos e casos de sucesso
-- Criar seção de blog para conteúdo educativo
+- Adicionar galeria de depoimentos e resultados de pacientes
+- Criar seção de blog para conteúdo educativo sobre medicina esportiva
 - Implementar sistema de agendamento online integrado
+- Adicionar animações AOS (Animate On Scroll)
 
-## Autores
+## Autor
 
-- [Seu Nome/Agência] - Design e Desenvolvimento
+- [Marshall Paiva](https://www.linkedin.com/in/marshallpaiva/) - Design e Desenvolvimento
 
 ## Licença
 
-Todos os direitos reservados.
+© 2025 Dr. João Diniz - Medicina do Esporte | CRM-SP 255.027. Todos os direitos reservados.
