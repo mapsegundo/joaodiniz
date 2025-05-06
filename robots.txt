@@ -1,0 +1,13 @@
+# Configuração para todos os robôs de busca
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.doutorjoaodiniz.com.br/sitemap.xml
+
+# Tempo entre as requisições (em segundos)
+Crawl-delay: 10
+
+# Diretórios não indexáveis (caso sejam adicionados no futuro)
+# Disallow: /admin/
+# Disallow: /tmp/ 

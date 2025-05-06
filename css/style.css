@@ -1100,10 +1100,65 @@ textarea {
   box-shadow: var(--shadow-lg);
   z-index: 99;
   transition: var(--transition-fast);
+  animation: whatsappPulse 2s infinite;
+  overflow: hidden;
+}
+
+.whatsapp-button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -150%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  animation: whatsappShine 6s infinite;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.whatsapp-button i {
+  position: relative;
+  z-index: 2;
 }
 
 .whatsapp-button:hover {
   transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+  animation: none;
+}
+
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+@keyframes whatsappShine {
+  0% {
+    left: -150%;
+  }
+  20% {
+    left: -150%;
+  }
+  65% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
 }
 
 .back-to-top {
