@@ -20,6 +20,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
       as="style"
     />
+    <link
+      rel="preload"
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      as="style"
+    />
 
     <!-- SEO Meta Tags -->
     <title>Dr. João Diniz - Medicina do Esporte | CRM-SP 255.027</title>
@@ -87,6 +92,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <!-- Schema.org para médicos (JSON-LD) -->
     <script type="application/ld+json">
@@ -207,7 +214,7 @@
     <section id="inicio" class="inicio-section">
       <div class="container">
         <div class="inicio-content">
-          <div class="inicio-text">
+          <div class="inicio-text" data-aos="fade-right" data-aos-delay="100">
             <h1>Transforme Seu Corpo e Sua Vida</h1>
             <h2>
               Medicina de Alta Performance para Quem Busca Resultados Reais
@@ -234,7 +241,7 @@
               >
             </div>
           </div>
-          <div class="inicio-image">
+          <div class="inicio-image" data-aos="fade-left" data-aos-delay="300">
             <img
               src="img/dr-joao-diniz.png"
               alt="Dr. João Diniz - Especialista em Medicina do Esporte e Performance"
@@ -248,12 +255,12 @@
     <!-- Sobre Section -->
     <section id="sobre" class="sobre-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <h2>Sobre Mim</h2>
           <p>Um pouco da minha jornada</p>
         </div>
         <div class="sobre-content">
-          <div class="sobre-image">
+          <div class="sobre-image" data-aos="fade-right" data-aos-delay="100">
             <img
               src="img/dr-joao-competicao.jpg"
               alt="Dr. João Diniz MuscleContest 2022"
@@ -265,7 +272,7 @@
               <span>MuscleContest 2022</span>
             </div>
           </div>
-          <div class="sobre-text">
+          <div class="sobre-text" data-aos="fade-left" data-aos-delay="300">
             <h3>Da farda à transformação de vidas</h3>
             <p>
               Formado em medicina por uma universidade estadual em 2022, dei
@@ -315,12 +322,12 @@
     <!-- Diferenciais Section -->
     <section id="diferenciais" class="diferenciais-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <h2>Por que escolher minha equipe?</h2>
           <p>Equipe de consultoria completa</p>
         </div>
         <div class="diferenciais-cards">
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-delay="100">
             <div class="card-icon">
               <i class="fas fa-user-md"></i>
             </div>
@@ -331,7 +338,7 @@
               reais.
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-delay="200">
             <div class="card-icon">
               <i class="fas fa-apple-alt"></i>
             </div>
@@ -342,7 +349,7 @@
               científica e personalizada.
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-delay="300">
             <div class="card-icon">
               <i class="fas fa-running"></i>
             </div>
@@ -361,7 +368,7 @@
     <section id="numeros" class="numeros-section">
       <div class="container">
         <div class="numeros-cards">
-          <div class="numero-card">
+          <div class="numero-card" data-aos="zoom-in" data-aos-delay="100">
             <div class="numero">USP</div>
             <h3>Experiência USP</h3>
             <p>
@@ -369,7 +376,7 @@
               maior da América Latina, aplicado na prática nos meus pacientes.
             </p>
           </div>
-          <div class="numero-card">
+          <div class="numero-card" data-aos="zoom-in" data-aos-delay="200">
             <div class="numero">700+</div>
             <h3>Vidas Transformadas</h3>
             <p>
@@ -377,7 +384,7 @@
               saúde, energia, disposição e autoestima.
             </p>
           </div>
-          <div class="numero-card">
+          <div class="numero-card" data-aos="zoom-in" data-aos-delay="300">
             <div class="numero">98%</div>
             <h3>Índice de Renovação</h3>
             <p>
@@ -392,12 +399,16 @@
     <!-- Planos Section -->
     <section id="planos" class="planos-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <h2>Meus Planos</h2>
           <p>Escolha a opção ideal para seu objetivo</p>
         </div>
         <div class="planos-cards">
-          <div class="plano-card destaque">
+          <div
+            class="plano-card destaque"
+            data-aos="flip-left"
+            data-aos-delay="100"
+          >
             <div class="plano-badge">Mais Popular</div>
             <h3>Ultra Men</h3>
             <p>
@@ -423,7 +434,7 @@
               ><span>Fazer Orçamento</span></a
             >
           </div>
-          <div class="plano-card">
+          <div class="plano-card" data-aos="flip-left" data-aos-delay="200">
             <h3>Consultoria Black</h3>
             <p>
               Atendimento médico, nutricionista e treinador por 60 dias
@@ -450,7 +461,7 @@
               >Marcar Consulta</a
             >
           </div>
-          <div class="plano-card">
+          <div class="plano-card" data-aos="flip-left" data-aos-delay="300">
             <h3>Plano Individual</h3>
             <p>
               Atendimento médico exclusivo, consulta, seguimento por 60 dias e
@@ -481,11 +492,11 @@
     <!-- FAQ Section -->
     <section id="faq" class="faq-section">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header" data-aos="fade-up">
           <h2>Perguntas Frequentes</h2>
           <p>Tire suas dúvidas</p>
         </div>
-        <div class="faq-accordion">
+        <div class="faq-accordion" data-aos="fade-up" data-aos-delay="200">
           <div class="faq-item">
             <div class="faq-question">
               <h3>O que o serviço de consultoria oferece?</h3>
@@ -579,7 +590,7 @@
     <section id="contato" class="contato-section">
       <div class="container">
         <div class="contato-wrapper">
-          <div class="contato-info">
+          <div class="contato-info" data-aos="fade-right" data-aos-delay="100">
             <div class="section-header">
               <h2>Entre em Contato</h2>
               <p>Estamos à sua disposição</p>
@@ -645,7 +656,7 @@
               </a>
             </div>
           </div>
-          <div class="contato-map">
+          <div class="contato-map" data-aos="fade-left" data-aos-delay="300">
             <h3>Localização</h3>
             <div class="map-container">
               <iframe
@@ -749,6 +760,10 @@
       target="_blank"
       rel="noopener"
       aria-label="Fale com o Dr. João Diniz via WhatsApp"
+      data-aos="zoom-in"
+      data-aos-delay="800"
+      data-aos-offset="0"
+      data-aos-once="false"
     >
       <i class="fab fa-whatsapp"></i>
     </a>
@@ -758,11 +773,17 @@
       id="back-to-top"
       class="back-to-top"
       aria-label="Voltar ao topo da página"
+      data-aos="fade-up"
+      data-aos-delay="800"
+      data-aos-offset="0"
+      data-aos-once="false"
     >
       <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Scripts -->
     <script src="js/script.js"></script>
+    <!-- Animate On Scroll Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </body>
 </html>

@@ -1,5 +1,19 @@
 // Esperar pelo carregamento do DOM
 document.addEventListener("DOMContentLoaded", function () {
+  // Inicializar AOS (Animate On Scroll)
+  AOS.init({
+    duration: 800,
+    easing: "ease-in-out",
+    once: true,
+    mirror: false,
+    disable: "mobile",
+  });
+
+  // Refresh AOS ao redimensionar a janela
+  window.addEventListener("resize", function () {
+    AOS.refresh();
+  });
+
   // Variáveis de elementos principais
   const header = document.getElementById("header");
   const mobileMenuBtn = document.querySelector(".mobile-menu-btn");

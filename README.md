@@ -20,6 +20,7 @@ Este site foi desenvolvido como landing page de alta conversão para o Dr. João
 - Design totalmente responsivo (mobile-first)
 - Otimizações avançadas para SEO e performance
 - Lazy loading para imagens e recursos pesados
+- AOS (Animate On Scroll) para animações elegantes durante a rolagem
 - Compatível com todos os navegadores modernos
 
 ## Estrutura do Site
@@ -45,6 +46,10 @@ O site está organizado nas seguintes seções:
 - Botão flutuante de WhatsApp com efeitos visuais para aumentar conversão
 - Integração com Google Maps com carregamento otimizado (lazy loading)
 - Links diretos para WhatsApp com mensagens pré-formatadas
+- Animações AOS (Animate On Scroll) nas seções principais do site:
+  - Efeitos fade-in, fade-up, zoom-in e flip em diferentes elementos
+  - Animações com delays escalonados para criar fluxo visual
+  - Configuração adaptada para dispositivos móveis (desabilitada para melhorar performance)
 
 ## Otimizações para SEO
 
@@ -78,7 +83,7 @@ O site está organizado nas seguintes seções:
 
 - Lazy loading nativo para imagens e iframe do Google Maps
 - Preload de recursos críticos (CSS, fontes principais)
-- Efeitos de animação otimizados
+- Efeitos de animação otimizados com AOS
 - Dimensões explícitas em imagens para evitar layout shifts
 - Minificação e compressão de recursos
 
@@ -101,7 +106,7 @@ A identidade visual segue um padrão profissional da área médica:
 │   ├── style.css       # Estilos principais
 │   └── responsive.css  # Estilos responsivos
 ├── js/
-│   └── script.js       # Funcionalidades JavaScript
+│   └── script.js       # Funcionalidades JavaScript e AOS
 ├── img/                # Imagens e recursos visuais
 │   ├── logo-dr-joao-diniz.png  # Logo principal
 │   ├── dr-joao-competicao.jpg  # Foto da seção Sobre
@@ -127,7 +132,6 @@ A identidade visual segue um padrão profissional da área médica:
 - Adicionar galeria de depoimentos e resultados de pacientes
 - Criar seção de blog para conteúdo educativo sobre medicina esportiva
 - Implementar sistema de agendamento online integrado
-- Adicionar animações AOS (Animate On Scroll)
 - Implementar PWA (Progressive Web App) para instalação em dispositivos
 - Adicionar mais idiomas com suporte a internacionalização
 
