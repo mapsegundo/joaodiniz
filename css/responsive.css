@@ -95,7 +95,7 @@
   }
 
   .logo img {
-    height: 70px;
+    height: 100px;
     max-width: 100%;
     object-fit: contain;
   }
@@ -276,7 +276,7 @@
 
   .footer-logo img {
     margin: 0 auto 1.5rem;
-    max-height: 160px;
+    max-height: 220px;
     width: auto;
   }
 
@@ -328,7 +328,7 @@
   }
 
   .footer-logo img {
-    max-height: 180px;
+    max-height: 200px;
   }
 
   .inicio-text h2 {

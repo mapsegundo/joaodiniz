@@ -285,7 +285,7 @@ textarea {
 }
 
 .logo img {
-  height: 100px;
+  height: 140px;
   width: auto;
   max-width: 100%;
   object-fit: contain;
@@ -293,7 +293,7 @@ textarea {
 }
 
 #header.scrolled .logo img {
-  height: 70px;
+  height: 90px;
 }
 
 /* Menu Principal */
@@ -1006,8 +1006,9 @@ textarea {
 }
 
 .footer-logo img {
-  height: 200px;
-  margin-bottom: 1rem;
+  max-height: 180px;
+  width: auto;
+  object-fit: contain;
 }
 
 .footer-menu h4,
@@ -1137,7 +1138,7 @@ textarea {
 /* Logo branco no rodapé */
 .logo-white {
   filter: brightness(0) invert(1);
-  max-height: 200px;
+  max-height: 240px;
   width: auto;
 }
 
