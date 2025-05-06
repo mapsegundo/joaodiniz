@@ -433,6 +433,9 @@ textarea {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .inicio-text h2 {
