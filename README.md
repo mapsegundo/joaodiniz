@@ -58,9 +58,11 @@ O site está organizado nas seguintes seções:
 - Sitemap XML para facilitar a indexação por mecanismos de busca
 - Schema.org (JSON-LD) para marcação estruturada de médico/profissional
 - URLs canônicas para evitar conteúdo duplicado
-- Controle de cache para recursos estáticos
+- Controle de cache para recursos estáticos (configurado para 7 dias)
 - Tags semânticas HTML5 utilizadas corretamente
 - Atributos alt descritivos em todas as imagens
+- Compatibilidade com protocolo HTTP e HTTPS
+- Correção de URLs para ambientes de teste e produção
 
 ## Compartilhamento Social
 
@@ -81,11 +83,18 @@ O site está organizado nas seguintes seções:
 
 ## Otimizações de Performance
 
-- Lazy loading nativo para imagens e iframe do Google Maps
-- Preload de recursos críticos (CSS, fontes principais)
-- Efeitos de animação otimizados com AOS
+- **Otimização avançada de imagens** (compressão da logomarca e imagens principais)
+- **Carregamento assíncrono de CSS** com fallback para não bloquear renderização
+- **Carregamento diferido de recursos** não críticos (media="print" onload)
+- **DNS prefetch** para domínios externos (Google Fonts, FontAwesome, CDNs)
+- Lazy loading nativo para todas imagens abaixo da dobra
+- Carregamento otimizado do iframe do Google Maps com sandbox controlado
+- Atributo defer em scripts para não bloquear renderização
+- Configuração otimizada da biblioteca AOS para dispositivos móveis
+- Controle de erro para problemas de acesso ao armazenamento em iframes
+- Cache estendido (7 dias) para melhorar performance em visitas repetidas
+- Preload apenas para recursos críticos acima da dobra
 - Dimensões explícitas em imagens para evitar layout shifts
-- Minificação e compressão de recursos
 
 ## Identidade Visual
 
@@ -108,7 +117,7 @@ A identidade visual segue um padrão profissional da área médica:
 ├── js/
 │   └── script.js       # Funcionalidades JavaScript e AOS
 ├── img/                # Imagens e recursos visuais
-│   ├── logo-dr-joao-diniz.png  # Logo principal
+│   ├── logo-dr-joao-diniz.png  # Logo principal (otimizada)
 │   ├── dr-joao-competicao.jpg  # Foto da seção Sobre
 │   ├── dr-joao-diniz.png       # Imagem principal
 │   └── favicon.ico             # Favicon do site
@@ -126,6 +135,14 @@ A identidade visual segue um padrão profissional da área médica:
 2. Abra o arquivo `index.html` em qualquer navegador moderno
 3. Para desenvolvimento, edite os arquivos CSS na pasta `/css` e os scripts em `/js`
 
+## Otimizações Recentes
+
+- **Maio 2025:** Otimização completa de SEO com URLs relativas para compatibilidade HTTP/HTTPS
+- **Maio 2025:** Implementação de otimizações avançadas de performance (lazy loading, defer, prefetch)
+- **Maio 2025:** Otimização de imagens para carregamento mais rápido
+- **Maio 2025:** Aprimoramento de animações AOS para melhor desempenho em dispositivos móveis
+- **Maio 2025:** Correção de problemas de armazenamento em iframes para evitar erros de console
+
 ## Melhorias Futuras
 
 - Implementar backend para processamento do formulário de contato
@@ -134,6 +151,7 @@ A identidade visual segue um padrão profissional da área médica:
 - Implementar sistema de agendamento online integrado
 - Implementar PWA (Progressive Web App) para instalação em dispositivos
 - Adicionar mais idiomas com suporte a internacionalização
+- Minificar e concatenar arquivos CSS e JS para produção
 
 ## Autor
 
