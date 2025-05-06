@@ -4,6 +4,8 @@
 
 Site profissional para o Dr. João Diniz, médico especialista em medicina do esporte, emagrecimento, hipertrofia e rejuvenescimento masculino.
 
+**🌐 Site publicado: [joaodiniz.vercel.app](https://joaodiniz.vercel.app/)**
+
 ## Visão Geral
 
 Este site foi desenvolvido como landing page de alta conversão para o Dr. João Diniz, apresentando seus serviços de consultoria médica especializada em transformação corporal. O design é moderno, responsivo e otimizado para gerar leads e agendamentos de consultas.
