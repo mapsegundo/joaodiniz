@@ -78,7 +78,8 @@
 
   .container {
     max-width: 100%;
-    padding: 0 1.25rem;
+    padding: 0 1.5rem;
+    width: 100%;
   }
 
   #header {
@@ -197,17 +198,22 @@
     height: auto;
     min-height: auto;
     padding-bottom: 4rem;
+    width: 100%;
   }
 
   .inicio-content {
     flex-direction: column-reverse;
     text-align: center;
     padding: 3rem 0 1rem;
+    width: 100%;
   }
 
   .inicio-text {
     flex: none;
     margin-top: 2rem;
+    width: 100%;
+    padding: 0;
+    max-width: 100%;
   }
 
   .inicio-text h1 {
@@ -215,17 +221,22 @@
     word-wrap: break-word;
     overflow-wrap: break-word;
     hyphens: auto;
-    padding: 0 5px;
+    padding: 0;
     width: 100%;
     white-space: normal;
+    max-width: 100%;
   }
 
   .inicio-text h2 {
     font-size: 1.2rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .inicio-text p {
-    margin: 0 auto 2rem;
+    margin: 0 0 2rem;
+    width: 100%;
+    max-width: 100%;
   }
 
   .inicio-cta {
@@ -236,11 +247,15 @@
   .inicio-image {
     flex: none;
     max-width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
 
   .inicio-image img {
     max-height: 400px;
+    max-width: 90%;
     margin: 0 auto;
+    object-fit: contain;
   }
 
   .inicio-bg-shape {
@@ -316,6 +331,9 @@
   .inicio-credentials {
     font-size: 1rem;
     margin-bottom: 1.2rem;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
   }
 
   .btn-animated {
@@ -455,20 +473,29 @@
 /* Dispositivos móveis pequenos (até 400px) */
 @media (max-width: 400px) {
   .inicio-text h1 {
-    font-size: 1.8rem;
-    line-height: 1.4;
+    font-size: 2.2rem;
+    line-height: 1.2;
+    margin-bottom: 1rem;
   }
 
   .inicio-text h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .inicio-cta {
-    gap: 12px;
+    flex-direction: column;
+    width: 100%;
   }
 
   .inicio-cta .btn {
-    padding: 0.85rem 1.2rem;
+    width: 100%;
+    margin-bottom: 0.8rem;
+  }
+
+  .inicio-text p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
   }
 
   .plano-features {
