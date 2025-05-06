@@ -64,6 +64,9 @@ A identidade visual segue um padrão profissional da área médica:
 ├── js/
 │   └── script.js       # Funcionalidades JavaScript
 ├── img/                # Imagens e recursos visuais
+│   ├── logo-dr-joao-diniz.png  # Logo principal
+│   ├── dr-joao-competicao.jpg  # Foto da seção Sobre
+│   └── favicon.ico             # Favicon do site
 └── README.md           # Este arquivo
 ```
 
