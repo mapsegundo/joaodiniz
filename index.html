@@ -38,7 +38,7 @@
     />
     <meta name="author" content="Dr. João Diniz" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://www.doutorjoaodiniz.com.br/" />
+    <link rel="canonical" href="/" />
 
     <!-- Open Graph Meta Tags (para Facebook, LinkedIn) -->
     <meta
@@ -50,11 +50,8 @@
       content="Transformação física com bases médicas sólidas. Especialista em emagrecimento, hipertrofia e rejuvenescimento masculino."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.doutorjoaodiniz.com.br/" />
-    <meta
-      property="og:image"
-      content="https://www.doutorjoaodiniz.com.br/img/dr-joao-diniz.png"
-    />
+    <meta property="og:url" content="/" />
+    <meta property="og:image" content="img/dr-joao-diniz.png" />
     <meta
       property="og:site_name"
       content="Dr. João Diniz - Medicina Esportiva"
@@ -71,10 +68,7 @@
       name="twitter:description"
       content="Transformação física com bases médicas sólidas. Especialista em emagrecimento, hipertrofia e rejuvenescimento masculino."
     />
-    <meta
-      name="twitter:image"
-      content="https://www.doutorjoaodiniz.com.br/img/dr-joao-diniz.png"
-    />
+    <meta name="twitter:image" content="img/dr-joao-diniz.png" />
 
     <!-- Controle de cache -->
     <meta http-equiv="Cache-Control" content="max-age=86400, public" />
@@ -101,12 +95,12 @@
         "@context": "https://schema.org",
         "@type": "Physician",
         "name": "Dr. João Diniz",
-        "image": "https://www.doutorjoaodiniz.com.br/img/dr-joao-diniz.png",
+        "image": "img/dr-joao-diniz.png",
         "description": "Médico especialista em medicina do esporte, emagrecimento, hipertrofia e rejuvenescimento masculino.",
         "medicalSpecialty": "Medicina do Esporte",
         "telephone": "+5511970865310",
         "email": "contato@doutorjoaodiniz.com.br",
-        "url": "https://www.doutorjoaodiniz.com.br",
+        "url": "/",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Av. Paulista, 1000",
@@ -135,6 +129,63 @@
           }
         ]
       }
+    </script>
+
+    <!-- Script para correção de URLs de meta tags -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Obter a URL base atual
+        const baseUrl = window.location.origin;
+
+        // Funções para corrigir URLs
+        function updateMetaContent(selector, attribute) {
+          const elements = document.querySelectorAll(selector);
+          elements.forEach((el) => {
+            const value = el.getAttribute(attribute);
+            if (value && !value.startsWith("http") && !value.startsWith("//")) {
+              // Apenas atualizar URLs relativas
+              el.setAttribute(
+                attribute,
+                baseUrl + (value.startsWith("/") ? value : "/" + value)
+              );
+            }
+          });
+        }
+
+        // Atualizar URLs nas meta tags
+        updateMetaContent('meta[property="og:image"]', "content");
+        updateMetaContent('meta[property="og:url"]', "content");
+        updateMetaContent('meta[name="twitter:image"]', "content");
+        updateMetaContent('link[rel="canonical"]', "href");
+
+        // Atualizar JSON-LD
+        const jsonLdScript = document.querySelector(
+          'script[type="application/ld+json"]'
+        );
+        if (jsonLdScript) {
+          let jsonData = JSON.parse(jsonLdScript.textContent);
+
+          // Atualizar URLs no JSON-LD
+          if (jsonData.image && !jsonData.image.startsWith("http")) {
+            jsonData.image =
+              baseUrl +
+              (jsonData.image.startsWith("/")
+                ? jsonData.image
+                : "/" + jsonData.image);
+          }
+
+          if (jsonData.url && !jsonData.url.startsWith("http")) {
+            jsonData.url =
+              baseUrl +
+              (jsonData.url.startsWith("/")
+                ? jsonData.url
+                : "/" + jsonData.url);
+          }
+
+          // Atualizar o script com os novos valores
+          jsonLdScript.textContent = JSON.stringify(jsonData, null, 2);
+        }
+      });
     </script>
   </head>
   <body>
