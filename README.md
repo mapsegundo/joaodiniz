@@ -126,7 +126,7 @@ A identidade visual segue um padrão profissional da área médica:
 ├── js/
 │   ├── script.js       # Funcionalidades JavaScript principais
 │   ├── youtube-shorts.js    # Carregador de vídeos YouTube
-│   └── carousel-optimized.js # Carrossel responsivo para vídeos
+│   └── carousel.js # Carrossel responsivo para vídeos
 ├── build/
 │   └── js/
 │       ├── script.min.js      # JavaScript principal minificado
