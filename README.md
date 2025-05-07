@@ -31,17 +31,23 @@ O site está organizado nas seguintes seções:
 
 1. **Header** - Navegação principal e CTA de agendamento
 2. **Início** - Hero section com proposta de valor principal
-3. **Sobre** - História profissional e credenciais do Dr. João Diniz
+3. **Vídeos** - Carrossel responsivo de shorts do YouTube do Dr. João Diniz
 4. **Diferenciais** - Equipe multidisciplinar (médico, nutricionista, treinador)
 5. **Números** - Estatísticas e resultados comprovados
-6. **Planos** - Serviços oferecidos (Ultra Men, Consultoria Black, Plano Individual)
-7. **FAQ** - Perguntas frequentes e respostas
-8. **Contato** - Informações de contato, localização e redes sociais
-9. **Footer** - Links rápidos, contato e credenciais
+6. **Sobre** - História profissional e credenciais do Dr. João Diniz
+7. **Planos** - Serviços oferecidos (Ultra Men, Consultoria Black, Plano Individual)
+8. **FAQ** - Perguntas frequentes e respostas
+9. **Contato** - Informações de contato, localização e redes sociais
+10. **Footer** - Links rápidos, contato e credenciais
 
 ## Recursos Interativos
 
 - Menu mobile responsivo com animação e navegação acessível
+- Carrossel de vídeos do YouTube responsivo:
+  - Grade de vídeos para telas grandes
+  - Carrossel com navegação por arraste em dispositivos móveis
+  - Indicadores de paginação e detecção do elemento centralizado
+  - Transições suaves e otimizadas para performance
 - Sistema de accordion para FAQ com suporte a teclado
 - Rolagem suave para navegação interna
 - Botão de "Voltar ao topo" com animação
@@ -86,6 +92,7 @@ O site está organizado nas seguintes seções:
 ## Otimizações de Performance
 
 - **Otimização avançada de imagens** (compressão da logomarca e imagens principais)
+- **Minificação de JavaScript** com scripts otimizados
 - **Carregamento assíncrono de CSS** com fallback para não bloquear renderização
 - **Carregamento diferido de recursos** não críticos (media="print" onload)
 - **DNS prefetch** para domínios externos (Google Fonts, FontAwesome, CDNs)
@@ -117,7 +124,14 @@ A identidade visual segue um padrão profissional da área médica:
 │   ├── style.css       # Estilos principais
 │   └── responsive.css  # Estilos responsivos
 ├── js/
-│   └── script.js       # Funcionalidades JavaScript e AOS
+│   ├── script.js       # Funcionalidades JavaScript principais
+│   ├── youtube-shorts.js    # Carregador de vídeos YouTube
+│   └── carousel-optimized.js # Carrossel responsivo para vídeos
+├── build/
+│   └── js/
+│       ├── script.min.js      # JavaScript principal minificado
+│       ├── youtube-shorts.min.js   # Script de vídeos minificado
+│       └── carousel.min.js    # Script de carrossel minificado
 ├── img/                # Imagens e recursos visuais
 │   ├── logo-dr-joao-diniz.png  # Logo principal (otimizada)
 │   ├── dr-joao-competicao.jpg  # Foto da seção Sobre
@@ -125,6 +139,7 @@ A identidade visual segue um padrão profissional da área médica:
 │   └── favicon.ico             # Favicon do site
 ├── robots.txt          # Instruções para crawlers
 ├── sitemap.xml         # Mapa do site para indexação
+├── .gitignore          # Configuração de exclusões para Git
 └── README.md           # Este arquivo
 ```
 
@@ -135,11 +150,17 @@ A identidade visual segue um padrão profissional da área médica:
    git clone https://github.com/mapsegundo/joaodiniz.git
    ```
 2. Abra o arquivo `index.html` em qualquer navegador moderno
-3. Para desenvolvimento, edite os arquivos CSS na pasta `/css` e os scripts em `/js`
+3. Para desenvolvimento, edite os arquivos JS na pasta `/js`
+4. Os arquivos minificados ficam em `/build/js` (gerados com Node.js)
 
 ## Otimizações Recentes
 
+- **Maio 2025:** Correção do comportamento de arrasto no carrossel para evitar interferência com o resto da página
+- **Maio 2025:** Implementação de carrossel responsivo de vídeos do YouTube com otimizações de performance
+- **Maio 2025:** Reorganização da estrutura do site para melhorar fluxo comercial
+- **Maio 2025:** Minificação avançada de JavaScript com separação em módulos
 - **Maio 2025:** Otimização completa de SEO com URLs relativas para compatibilidade HTTP/HTTPS
+- **Maio 2025:** Refatoração do código JavaScript com padrões de Clean Code
 - **Maio 2025:** Implementação de otimizações avançadas de performance (lazy loading, defer, prefetch)
 - **Maio 2025:** Otimização de imagens para carregamento mais rápido
 - **Maio 2025:** Aprimoramento de animações AOS para melhor desempenho em dispositivos móveis
@@ -152,8 +173,7 @@ A identidade visual segue um padrão profissional da área médica:
 - Criar seção de blog para conteúdo educativo sobre medicina esportiva
 - Implementar sistema de agendamento online integrado
 - Implementar PWA (Progressive Web App) para instalação em dispositivos
-- Adicionar mais idiomas com suporte a internacionalização
-- Minificar e concatenar arquivos CSS e JS para produção
+- Automatizar processo de build e minificação
 
 ## Autor
 

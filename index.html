@@ -213,6 +213,225 @@
         }
       });
     </script>
+
+    <!-- Estilos para a seção de shorts -->
+    <style>
+      .shorts-section {
+        padding: 80px 0;
+        background: var(--light-bg);
+      }
+
+      .shorts-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .shorts-item {
+        background: #fff;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .shorts-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .shorts-video {
+        position: relative;
+        padding-bottom: 177.77%; /* Proporção 9:16 para shorts */
+        height: 0;
+        overflow: hidden;
+      }
+
+      .shorts-video iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+
+      .shorts-info {
+        padding: 20px;
+      }
+
+      .shorts-info h3 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: var(--primary-color);
+      }
+
+      .shorts-info p {
+        font-size: 0.9rem;
+        color: var(--text-color);
+        margin-bottom: 0;
+      }
+
+      .shorts-cta {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .shorts-cta .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 30px;
+        font-size: 1.1rem;
+      }
+
+      .shorts-cta .btn i {
+        font-size: 1.3rem;
+      }
+
+      /* Estilos para carrossel responsivo */
+      @media (max-width: 991px) {
+        #videos .shorts-grid.carousel-active {
+          display: flex;
+          overflow-x: auto;
+          scroll-snap-type: x proximity; /* Mudando para proximity para transição mais suave */
+          scrollbar-width: none;
+          -ms-overflow-style: none;
+          gap: 15px;
+          padding: 10px 5px;
+          scroll-behavior: smooth;
+          cursor: grab;
+        }
+
+        #videos .shorts-grid.carousel-active.grabbing {
+          cursor: grabbing;
+        }
+
+        #videos .shorts-grid.carousel-active::-webkit-scrollbar {
+          display: none;
+        }
+
+        #videos .shorts-grid.carousel-active .shorts-item {
+          flex: 0 0 85%;
+          scroll-snap-align: center;
+          margin-right: 15px;
+          transform: translateZ(0); /* Habilita aceleração de hardware */
+          transition: all 0.25s ease; /* Tornando a transição mais rápida */
+          opacity: 0.9;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+          will-change: transform, opacity; /* Avisa ao navegador sobre as propriedades que serão animadas */
+        }
+
+        #videos .shorts-grid.carousel-active .shorts-item.active {
+          opacity: 1;
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+          z-index: 2;
+        }
+
+        #videos .carousel-indicators {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          margin-top: 20px;
+        }
+
+        #videos .indicator-dot {
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background-color: rgba(20, 184, 166, 0.3);
+          cursor: pointer;
+          transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+
+        #videos .indicator-dot.active {
+          background-color: var(--primary-color);
+          transform: scale(1.2);
+        }
+      }
+
+      @media (max-width: 768px) {
+        #videos .shorts-grid {
+          grid-template-columns: 1fr;
+          max-width: 400px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+
+        #videos .shorts-grid.carousel-active {
+          max-width: none;
+          padding: 10px 0;
+        }
+
+        #videos .shorts-grid.carousel-active .shorts-item {
+          flex: 0 0 90%;
+        }
+      }
+
+      @media (max-width: 576px) {
+        #videos .shorts-grid.carousel-active .shorts-item {
+          flex: 0 0 95%;
+        }
+      }
+
+      /* Estilos para o loading spinner */
+      .shorts-loading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 300px;
+        width: 100%;
+      }
+
+      .loading-spinner {
+        width: 50px;
+        height: 50px;
+        border: 5px solid var(--light-bg);
+        border-top: 5px solid var(--primary-color);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-bottom: 20px;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .shorts-loading p {
+        color: var(--text-color);
+        font-size: 1.1rem;
+      }
+
+      /* Estilos para mensagem de erro */
+      .shorts-error {
+        text-align: center;
+        padding: 40px 20px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .shorts-error i {
+        font-size: 3rem;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+      }
+
+      .shorts-error p {
+        color: var(--text-color);
+        margin-bottom: 10px;
+      }
+
+      .shorts-error .btn {
+        margin-top: 20px;
+      }
+    </style>
   </head>
   <body>
     <!-- Header -->
@@ -236,15 +455,18 @@
                 <a href="#inicio" aria-label="Ir para seção início">Início</a>
               </li>
               <li>
-                <a href="#sobre" aria-label="Ir para seção sobre">Sobre</a>
-              </li>
-              <li>
-                <a href="#diferenciais" aria-label="Ir para seção serviços"
-                  >Serviços</a
+                <a href="#diferenciais" aria-label="Ir para seção diferenciais"
+                  >Diferenciais</a
                 >
               </li>
               <li>
+                <a href="#sobre" aria-label="Ir para seção sobre">Sobre</a>
+              </li>
+              <li>
                 <a href="#planos" aria-label="Ir para seção planos">Planos</a>
+              </li>
+              <li>
+                <a href="#faq" aria-label="Ir para seção FAQ">FAQ</a>
               </li>
               <li>
                 <a href="#contato" aria-label="Ir para seção contato"
@@ -331,69 +553,29 @@
       <div class="inicio-bg-shape"></div>
     </section>
 
-    <!-- Sobre Section -->
-    <section id="sobre" class="sobre-section">
+    <!-- Vídeos Section -->
+    <section id="videos" class="shorts-section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <h2>Sobre Mim</h2>
-          <p>Um pouco da minha jornada</p>
+          <h2>Saúde e Performance com Base Científica</h2>
+          <p>Conteúdo exclusivo sobre saúde e performance</p>
         </div>
-        <div class="sobre-content">
-          <div class="sobre-image" data-aos="fade-right" data-aos-delay="100">
-            <img
-              src="img/dr-joao-competicao.jpg"
-              alt="Dr. João Diniz MuscleContest 2022"
-              loading="lazy"
-              width="500"
-              height="333"
-            />
-            <div class="sobre-badge">
-              <span>MuscleContest 2022</span>
-            </div>
+        <div class="shorts-grid">
+          <!-- Os shorts serão carregados dinamicamente aqui -->
+          <div class="shorts-loading">
+            <div class="loading-spinner"></div>
+            <p>Carregando vídeos...</p>
           </div>
-          <div class="sobre-text" data-aos="fade-left" data-aos-delay="300">
-            <h3>Da farda à transformação de vidas</h3>
-            <p>
-              Formado em medicina por uma universidade estadual em 2022, dei
-              meus primeiros passos na profissão com disciplina e propósito,
-              servindo como médico no Exército Brasileiro. Foi lá que aprendi,
-              na prática, que saúde e desempenho caminham lado a lado — e que o
-              corpo pode ser moldado com estratégia, constância e ciência.
-            </p>
-            <p>
-              Movido pelo desejo de entender profundamente a fisiologia do
-              desempenho humano, conquistei uma das vagas mais disputadas da
-              América Latina: o programa de residência médica em Medicina do
-              Esporte da USP. Lá, mergulhei na ciência da performance, da
-              longevidade e da transformação corporal.
-            </p>
-            <p>
-              Hoje, lidero uma clínica que une medicina, estética, nutrição e
-              treinamento com um único objetivo: transformar corpos com
-              responsabilidade, melhorar saúde com estratégia e devolver
-              autoestima com ciência.
-            </p>
-            <p>
-              <strong>Minha missão:</strong> usar minha trajetória — da farda ao
-              jaleco branco — para construir caminhos reais de emagrecimento,
-              hipertrofia e rejuvenescimento masculino, com ética, precisão e
-              resultado.
-            </p>
-            <div class="expertise-badges">
-              <div class="badge">
-                <i class="fas fa-graduation-cap"></i>
-                <span>Medicina do Esporte</span>
-              </div>
-              <div class="badge">
-                <i class="fas fa-dumbbell"></i>
-                <span>Fisiculturista</span>
-              </div>
-              <div class="badge">
-                <i class="fas fa-medal"></i>
-                <span>Padrão USP</span>
-              </div>
-            </div>
-          </div>
+        </div>
+        <div class="shorts-cta" data-aos="fade-up" data-aos-delay="400">
+          <a
+            href="https://www.youtube.com/@dr.joaodiniz/shorts"
+            class="btn btn-secondary"
+            target="_blank"
+            rel="noopener"
+          >
+            <i class="fab fa-youtube"></i> Ver mais vídeos
+          </a>
         </div>
       </div>
     </section>
@@ -475,12 +657,79 @@
       </div>
     </section>
 
+    <!-- Sobre Section -->
+    <section id="sobre" class="sobre-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Sobre Mim</h2>
+          <p>Um pouco da minha jornada</p>
+        </div>
+        <div class="sobre-content">
+          <div class="sobre-image" data-aos="fade-right" data-aos-delay="100">
+            <img
+              src="img/dr-joao-competicao.jpg"
+              alt="Dr. João Diniz MuscleContest 2022"
+              loading="lazy"
+              width="500"
+              height="333"
+            />
+            <div class="sobre-badge">
+              <span>MuscleContest 2022</span>
+            </div>
+          </div>
+          <div class="sobre-text" data-aos="fade-left" data-aos-delay="300">
+            <h3>Da farda à transformação de vidas</h3>
+            <p>
+              Formado em medicina por uma universidade estadual em 2022, dei
+              meus primeiros passos na profissão com disciplina e propósito,
+              servindo como médico no Exército Brasileiro. Foi lá que aprendi,
+              na prática, que saúde e desempenho caminham lado a lado — e que o
+              corpo pode ser moldado com estratégia, constância e ciência.
+            </p>
+            <p>
+              Movido pelo desejo de entender profundamente a fisiologia do
+              desempenho humano, conquistei uma das vagas mais disputadas da
+              América Latina: o programa de residência médica em Medicina do
+              Esporte da USP. Lá, mergulhei na ciência da performance, da
+              longevidade e da transformação corporal.
+            </p>
+            <p>
+              Hoje, lidero uma clínica que une medicina, estética, nutrição e
+              treinamento com um único objetivo: transformar corpos com
+              responsabilidade, melhorar saúde com estratégia e devolver
+              autoestima com ciência.
+            </p>
+            <p>
+              <strong>Minha missão:</strong> usar minha trajetória — da farda ao
+              jaleco branco — para construir caminhos reais de emagrecimento,
+              hipertrofia e rejuvenescimento masculino, com ética, precisão e
+              resultado.
+            </p>
+            <div class="expertise-badges">
+              <div class="badge">
+                <i class="fas fa-graduation-cap"></i>
+                <span>Medicina do Esporte</span>
+              </div>
+              <div class="badge">
+                <i class="fas fa-dumbbell"></i>
+                <span>Fisiculturista</span>
+              </div>
+              <div class="badge">
+                <i class="fas fa-medal"></i>
+                <span>Padrão USP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Planos Section -->
     <section id="planos" class="planos-section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
           <h2>Meus Planos</h2>
-          <p>Escolha a opção ideal para seu objetivo</p>
+          <p>Invista em sua saúde e transformação</p>
         </div>
         <div class="planos-cards">
           <div
@@ -488,81 +737,128 @@
             data-aos="flip-left"
             data-aos-delay="100"
           >
-            <div class="plano-badge">Mais Popular</div>
-            <h3>Ultra Men</h3>
+            <div class="plano-header">
+              <div class="plano-icon">
+                <i class="fas fa-crown"></i>
+              </div>
+              <h3>Ultra Men</h3>
+              <div class="plano-subtitle">Transformação Completa</div>
+            </div>
             <p>
               Para homens que não aceitam envelhecer sem controle: restaure sua
-              imagem, sua forma e sua potência com um programa de alta
-              performance, criado para resultados visíveis e duradouros.
+              imagem, forma e potência com um programa de alta performance.
             </p>
+            <div class="plano-valor">
+              <div class="plano-consulte">
+                <i class="fas fa-star-of-life"></i> Pacote Premium
+              </div>
+            </div>
             <ul class="plano-features">
-              <li><i class="fas fa-check"></i> Avaliação + Implante Capilar</li>
-              <li><i class="fas fa-check"></i> Avaliação Médica</li>
               <li>
-                <i class="fas fa-check"></i> Avaliação de composição corporal
+                <i class="fas fa-check-circle"></i> Avaliação + Implante Capilar
               </li>
               <li>
-                <i class="fas fa-check"></i> Acompanhamento Nutri e Treinador
+                <i class="fas fa-check-circle"></i> Avaliação Médica Completa
               </li>
-              <li><i class="fas fa-check"></i> Acompanhamento 6 meses</li>
+              <li>
+                <i class="fas fa-check-circle"></i> Análise de Composição
+                Corporal
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Acompanhamento Nutri e
+                Treinador
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Acompanhamento por 6 Meses
+              </li>
             </ul>
-            <a
-              href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20plano%20Ultra%20Men"
-              class="btn btn-primary btn-animated"
-              target="_blank"
-              ><span>Fazer Orçamento</span></a
-            >
+            <div class="plano-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20plano%20Ultra%20Men"
+                class="btn btn-primary btn-animated"
+                target="_blank"
+                ><span
+                  ><i class="fas fa-file-invoice-dollar"></i> Solicitar
+                  Orçamento</span
+                ></a
+              >
+            </div>
           </div>
           <div class="plano-card" data-aos="flip-left" data-aos-delay="200">
-            <h3>Consultoria Black</h3>
+            <div class="plano-header">
+              <div class="plano-icon">
+                <i class="fas fa-dumbbell"></i>
+              </div>
+              <h3>Consultoria Black</h3>
+              <div class="plano-subtitle">Equipe Completa</div>
+            </div>
             <p>
               Atendimento médico, nutricionista e treinador por 60 dias
               (consulta e retorno).
             </p>
             <div class="plano-preco">
-              <span>Até 6x</span>
+              <span>Investimento</span>
               <strong>R$ 300,00</strong>
+              <div class="plano-parcelamento">em até 6x sem juros</div>
             </div>
             <ul class="plano-features">
-              <li><i class="fas fa-check"></i> Avaliação Médica</li>
+              <li><i class="fas fa-check-circle"></i> Avaliação Médica</li>
               <li>
-                <i class="fas fa-check"></i> Avaliação de composição corporal
+                <i class="fas fa-check-circle"></i> Análise de Composição
+                Corporal
               </li>
               <li>
-                <i class="fas fa-check"></i> Acompanhamento Nutri e Treinador
+                <i class="fas fa-check-circle"></i> Acompanhamento Nutri e
+                Treinador
               </li>
-              <li><i class="fas fa-check"></i> Acompanhamento 60 dias</li>
+              <li>
+                <i class="fas fa-check-circle"></i> Acompanhamento por 60 Dias
+              </li>
             </ul>
-            <a
-              href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20plano%20Consultoria%20Black"
-              class="btn btn-secondary"
-              target="_blank"
-              >Marcar Consulta</a
-            >
+            <div class="plano-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20plano%20Consultoria%20Black"
+                class="btn btn-secondary"
+                target="_blank"
+                ><i class="fas fa-calendar-check"></i> Marcar Consulta</a
+              >
+            </div>
           </div>
           <div class="plano-card" data-aos="flip-left" data-aos-delay="300">
-            <h3>Plano Individual</h3>
+            <div class="plano-header">
+              <div class="plano-icon">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h3>Plano Individual</h3>
+              <div class="plano-subtitle">Atendimento Médico</div>
+            </div>
             <p>
               Atendimento médico exclusivo, consulta, seguimento por 60 dias e
               retorno.
             </p>
             <div class="plano-preco">
-              <span>Até 3x</span>
+              <span>Investimento</span>
               <strong>R$ 290,00</strong>
+              <div class="plano-parcelamento">em até 3x sem juros</div>
             </div>
             <ul class="plano-features">
-              <li><i class="fas fa-check"></i> Avaliação Médica</li>
+              <li><i class="fas fa-check-circle"></i> Avaliação Médica</li>
               <li>
-                <i class="fas fa-check"></i> Avaliação de composição corporal
+                <i class="fas fa-check-circle"></i> Análise de Composição
+                Corporal
               </li>
-              <li><i class="fas fa-check"></i> Acompanhamento por 60 dias</li>
+              <li>
+                <i class="fas fa-check-circle"></i> Acompanhamento por 60 Dias
+              </li>
             </ul>
-            <a
-              href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20plano%20Individual"
-              class="btn btn-secondary"
-              target="_blank"
-              >Marcar Consulta</a
-            >
+            <div class="plano-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20plano%20Individual"
+                class="btn btn-secondary"
+                target="_blank"
+                ><i class="fas fa-calendar-check"></i> Marcar Consulta</a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -772,9 +1068,12 @@
             <h4>Links Rápidos</h4>
             <ul>
               <li><a href="#inicio">Início</a></li>
+              <li><a href="#videos">Vídeos</a></li>
+              <li><a href="#diferenciais">Diferenciais</a></li>
+              <li><a href="#numeros">Resultados</a></li>
               <li><a href="#sobre">Sobre</a></li>
-              <li><a href="#diferenciais">Serviços</a></li>
               <li><a href="#planos">Planos</a></li>
+              <li><a href="#faq">FAQ</a></li>
               <li><a href="#contato">Contato</a></li>
             </ul>
           </div>
@@ -863,7 +1162,9 @@
     </button>
 
     <!-- Scripts -->
-    <script src="js/script.js" defer></script>
+    <script src="build/js/script.min.js" defer></script>
+    <script src="build/js/youtube-shorts.min.js" defer></script>
+    <script src="build/js/carousel.min.js" defer></script>
     <!-- Animate On Scroll Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
   </body>
