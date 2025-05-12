@@ -438,17 +438,25 @@
       }
 
       /* Adicionar estilos para os preços */
-      .valor-entrada {
-        font-size: 2.2rem;
+      .valor-entrada-label {
+        display: block;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 0.2rem;
+      }
+
+      .valor-entrada-value {
+        display: block;
+        font-size: 2.5rem;
         font-weight: 700;
         color: var(--primary-color);
         line-height: 1.2;
         margin-bottom: 0.5rem;
-        position: relative;
-        display: inline-block;
       }
 
-      .plano-card.destaque .valor-entrada {
+      .plano-card.destaque .valor-entrada-label,
+      .plano-card.destaque .valor-entrada-value {
         color: var(--primary-light);
         text-shadow: 0 0 10px rgba(153, 246, 228, 0.3);
       }
@@ -785,7 +793,8 @@
             </p>
             <div class="plano-preco">
               <span>Investimento</span>
-              <strong class="valor-entrada">Entrada: R$ 1.800</strong>
+              <strong class="valor-entrada-label">Entrada</strong>
+              <strong class="valor-entrada-value">R$ 1.800</strong>
               <div class="plano-parcelamento">
                 + <span class="parcelas-destaque">18x R$ 889,00</span>
               </div>
