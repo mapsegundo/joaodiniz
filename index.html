@@ -436,6 +436,34 @@
       .shorts-error .btn {
         margin-top: 20px;
       }
+
+      /* Adicionar estilos para os preços */
+      .valor-entrada {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        line-height: 1.2;
+        margin-bottom: 0.5rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .plano-card.destaque .valor-entrada {
+        color: var(--primary-light);
+        text-shadow: 0 0 10px rgba(153, 246, 228, 0.3);
+      }
+
+      .plano-card.destaque .plano-parcelamento {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-top: 0.5rem;
+      }
+
+      .parcelas-destaque {
+        font-weight: 700;
+        font-size: 1.1rem;
+      }
     </style>
   </head>
   <body>
@@ -757,9 +785,9 @@
             </p>
             <div class="plano-preco">
               <span>Investimento</span>
-              <strong>Entrada + Parcelas</strong>
+              <strong class="valor-entrada">Entrada: R$ 1.800</strong>
               <div class="plano-parcelamento">
-                Entrada R$ 1.800 + 18x R$ 889,00
+                + <span class="parcelas-destaque">18x R$ 889,00</span>
               </div>
             </div>
             <ul class="plano-features">
