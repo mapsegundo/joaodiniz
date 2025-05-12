@@ -91,7 +91,10 @@ O site está organizado nas seguintes seções:
 
 ## Otimizações de Performance
 
-- **Otimização avançada de imagens** (compressão da logomarca e imagens principais)
+- **Otimização avançada de imagens**:
+  - Compressão da logomarca e imagens principais
+  - Utilização do formato WebP para imagens otimizadas
+  - Dimensões explícitas em imagens para evitar layout shifts
 - **Minificação de JavaScript** com scripts otimizados
 - **Carregamento assíncrono de CSS** com fallback para não bloquear renderização
 - **Carregamento diferido de recursos** não críticos (media="print" onload)
@@ -103,7 +106,6 @@ O site está organizado nas seguintes seções:
 - Controle de erro para problemas de acesso ao armazenamento em iframes
 - Cache estendido (7 dias) para melhorar performance em visitas repetidas
 - Preload apenas para recursos críticos acima da dobra
-- Dimensões explícitas em imagens para evitar layout shifts
 
 ## Identidade Visual
 
@@ -134,8 +136,8 @@ A identidade visual segue um padrão profissional da área médica:
 │       └── carousel.min.js    # Script de carrossel minificado
 ├── img/                # Imagens e recursos visuais
 │   ├── logo-dr-joao-diniz.png  # Logo principal (otimizada)
-│   ├── dr-joao-competicao.jpg  # Foto da seção Sobre
-│   ├── dr-joao-diniz.png       # Imagem principal
+│   ├── dr-joao-competicao.webp  # Foto da seção Sobre (formato WebP)
+│   ├── dr-joao-diniz.webp       # Imagem principal (formato WebP)
 │   └── favicon.ico             # Favicon do site
 ├── robots.txt          # Instruções para crawlers
 ├── sitemap.xml         # Mapa do site para indexação
@@ -155,6 +157,7 @@ A identidade visual segue um padrão profissional da área médica:
 
 ## Otimizações Recentes
 
+- **Maio 2025:** Conversão de imagens principais para o formato WebP para carregamento mais rápido
 - **Maio 2025:** Correção do comportamento de arrasto no carrossel para evitar interferência com o resto da página
 - **Maio 2025:** Implementação de carrossel responsivo de vídeos do YouTube com otimizações de performance
 - **Maio 2025:** Reorganização da estrutura do site para melhorar fluxo comercial
