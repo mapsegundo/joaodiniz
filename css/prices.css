@@ -1,0 +1,35 @@
+/* Estilos para os preços dos planos */
+.valor-entrada-label {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.2rem;
+}
+
+.valor-entrada-value {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.plano-card.destaque .valor-entrada-label,
+.plano-card.destaque .valor-entrada-value {
+  color: var(--primary-light);
+  text-shadow: 0 0 10px rgba(153, 246, 228, 0.3);
+}
+
+.plano-card.destaque .plano-parcelamento {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.parcelas-destaque {
+  font-weight: 700;
+  font-size: 1.1rem;
+}

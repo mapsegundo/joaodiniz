@@ -124,7 +124,9 @@ A identidade visual segue um padrão profissional da área médica:
 ├── index.html          # Arquivo principal
 ├── css/
 │   ├── style.css       # Estilos principais
-│   └── responsive.css  # Estilos responsivos
+│   ├── responsive.css  # Estilos responsivos
+│   ├── shorts.css      # Estilos específicos para seção de vídeos
+│   └── prices.css      # Estilos específicos para preços
 ├── js/
 │   ├── script.js       # Funcionalidades JavaScript principais
 │   ├── youtube-shorts.js    # Carregador de vídeos YouTube
@@ -133,7 +135,8 @@ A identidade visual segue um padrão profissional da área médica:
 │   └── js/
 │       ├── script.min.js      # JavaScript principal minificado
 │       ├── youtube-shorts.min.js   # Script de vídeos minificado
-│       └── carousel.min.js    # Script de carrossel minificado
+│       ├── carousel.min.js    # Script de carrossel minificado
+│       └── loading.min.js     # Script otimizado para carregamento da página
 ├── img/                # Imagens e recursos visuais
 │   ├── logo-dr-joao-diniz.png  # Logo principal (otimizada)
 │   ├── dr-joao-competicao.webp  # Foto da seção Sobre (formato WebP)
@@ -157,6 +160,12 @@ A identidade visual segue um padrão profissional da área médica:
 
 ## Otimizações Recentes
 
+- **Maio 2025:** Modularização do CSS para carregamento não-bloqueante (separação em style.css, responsive.css, shorts.css e prices.css)
+- **Maio 2025:** Implementação de otimizações avançadas de Core Web Vitals e melhorias no PageSpeed
+- **Maio 2025:** Otimização de carregamento de fontes com Font Loading API
+- **Maio 2025:** Implementação de CSS crítico inline para melhorar o First Contentful Paint
+- **Maio 2025:** Otimização do carregamento de ícones com conjuntos específicos do FontAwesome
+- **Maio 2025:** Adição de atributos fetchpriority para recursos críticos
 - **Maio 2025:** Conversão de imagens principais para o formato WebP para carregamento mais rápido
 - **Maio 2025:** Correção do comportamento de arrasto no carrossel para evitar interferência com o resto da página
 - **Maio 2025:** Implementação de carrossel responsivo de vídeos do YouTube com otimizações de performance

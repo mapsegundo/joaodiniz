@@ -26,14 +26,21 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
       as="style"
     />
+
+    <!-- Apenas os ícones necessários da Font Awesome -->
     <link
       rel="preload"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
       as="style"
     />
     <link
       rel="preload"
-      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
       as="style"
     />
 
@@ -95,9 +102,22 @@
       media="print"
       onload="this.media='all'"
     />
+    <!-- Font Awesome otimizado -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
       media="print"
       onload="this.media='all'"
     />
@@ -108,6 +128,19 @@
       media="print"
       onload="this.media='all'"
     />
+    <!-- CSS não crítico -->
+    <link
+      rel="stylesheet"
+      href="css/shorts.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="css/prices.css"
+      media="print"
+      onload="this.media='all'"
+    />
     <noscript>
       <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
@@ -115,364 +148,86 @@
       />
       <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
       />
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <link rel="stylesheet" href="css/shorts.css" />
+      <link rel="stylesheet" href="css/prices.css" />
     </noscript>
 
-    <!-- Schema.org para médicos (JSON-LD) -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Physician",
-        "name": "Dr. João Diniz",
-        "image": "img/dr-joao-diniz.webp",
-        "description": "Médico especialista em medicina do esporte, emagrecimento, hipertrofia e rejuvenescimento masculino.",
-        "medicalSpecialty": "Medicina do Esporte",
-        "telephone": "+5511970865310",
-        "email": "contato@doutorjoaodiniz.com.br",
-        "url": "/",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Av. Paulista, 1000",
-          "addressLocality": "São Paulo",
-          "addressRegion": "SP",
-          "postalCode": "01310-100",
-          "addressCountry": "BR"
-        },
-        "sameAs": [
-          "https://instagram.com/dr.joaodiniz",
-          "https://www.youtube.com/@dr.joaodiniz"
-        ],
-        "priceRange": "R$$$",
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
-            ],
-            "opens": "08:00",
-            "closes": "18:00"
-          }
-        ]
-      }
-    </script>
-
-    <!-- Script para correção de URLs de meta tags -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // Obter a URL base atual
-        const baseUrl = window.location.origin;
-
-        // Funções para corrigir URLs
-        function updateMetaContent(selector, attribute) {
-          const elements = document.querySelectorAll(selector);
-          elements.forEach((el) => {
-            const value = el.getAttribute(attribute);
-            if (value && !value.startsWith("http") && !value.startsWith("//")) {
-              // Apenas atualizar URLs relativas
-              el.setAttribute(
-                attribute,
-                baseUrl + (value.startsWith("/") ? value : "/" + value)
-              );
-            }
-          });
-        }
-
-        // Atualizar URLs nas meta tags
-        updateMetaContent('meta[property="og:image"]', "content");
-        updateMetaContent('meta[property="og:url"]', "content");
-        updateMetaContent('meta[name="twitter:image"]', "content");
-        updateMetaContent('link[rel="canonical"]', "href");
-
-        // Atualizar JSON-LD
-        const jsonLdScript = document.querySelector(
-          'script[type="application/ld+json"]'
-        );
-        if (jsonLdScript) {
-          let jsonData = JSON.parse(jsonLdScript.textContent);
-
-          // Atualizar URLs no JSON-LD
-          if (jsonData.image && !jsonData.image.startsWith("http")) {
-            jsonData.image =
-              baseUrl +
-              (jsonData.image.startsWith("/")
-                ? jsonData.image
-                : "/" + jsonData.image);
-          }
-
-          if (jsonData.url && !jsonData.url.startsWith("http")) {
-            jsonData.url =
-              baseUrl +
-              (jsonData.url.startsWith("/")
-                ? jsonData.url
-                : "/" + jsonData.url);
-          }
-
-          // Atualizar o script com os novos valores
-          jsonLdScript.textContent = JSON.stringify(jsonData, null, 2);
-        }
-      });
-    </script>
-
-    <!-- Estilos para a seção de shorts -->
+    <!-- Styles críticos inline para melhorar o First Contentful Paint -->
     <style>
-      .shorts-section {
-        padding: 80px 0;
-        background: var(--light-bg);
+      /* Estilos críticos para a primeira renderização */
+      :root {
+        --primary-color: #14b8a6;
+        --primary-dark: #0f766e;
+        --text-light: #f8fafc;
+        --text-dark: #0f172a;
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --font-primary: "Montserrat", sans-serif;
       }
-
-      .shorts-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-primary);
+        line-height: 1.6;
       }
-
-      .shorts-item {
-        background: #fff;
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease;
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
       }
-
-      .shorts-item:hover {
-        transform: translateY(-5px);
-      }
-
-      .shorts-video {
-        position: relative;
-        padding-bottom: 177.77%; /* Proporção 9:16 para shorts */
-        height: 0;
-        overflow: hidden;
-      }
-
-      .shorts-video iframe {
-        position: absolute;
+      #header {
+        position: fixed;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        border: none;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: var(--shadow-md);
       }
-
-      .shorts-info {
-        padding: 20px;
-      }
-
-      .shorts-info h3 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-        color: var(--primary-color);
-      }
-
-      .shorts-info p {
-        font-size: 0.9rem;
-        color: var(--text-color);
-        margin-bottom: 0;
-      }
-
-      .shorts-cta {
-        text-align: center;
-        margin-top: 40px;
-      }
-
-      .shorts-cta .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 12px 30px;
-        font-size: 1.1rem;
-      }
-
-      .shorts-cta .btn i {
-        font-size: 1.3rem;
-      }
-
-      /* Estilos para carrossel responsivo */
-      @media (max-width: 991px) {
-        #videos .shorts-grid.carousel-active {
-          display: flex;
-          overflow-x: auto;
-          scroll-snap-type: x proximity; /* Mudando para proximity para transição mais suave */
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-          gap: 15px;
-          padding: 10px 5px;
-          scroll-behavior: smooth;
-          cursor: grab;
-        }
-
-        #videos .shorts-grid.carousel-active.grabbing {
-          cursor: grabbing;
-        }
-
-        #videos .shorts-grid.carousel-active::-webkit-scrollbar {
-          display: none;
-        }
-
-        #videos .shorts-grid.carousel-active .shorts-item {
-          flex: 0 0 85%;
-          scroll-snap-align: center;
-          margin-right: 15px;
-          transform: translateZ(0); /* Habilita aceleração de hardware */
-          transition: all 0.25s ease; /* Tornando a transição mais rápida */
-          opacity: 0.9;
-          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-          will-change: transform, opacity; /* Avisa ao navegador sobre as propriedades que serão animadas */
-        }
-
-        #videos .shorts-grid.carousel-active .shorts-item.active {
-          opacity: 1;
-          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-          z-index: 2;
-        }
-
-        #videos .carousel-indicators {
-          display: flex;
-          justify-content: center;
-          gap: 8px;
-          margin-top: 20px;
-        }
-
-        #videos .indicator-dot {
-          width: 10px;
-          height: 10px;
-          border-radius: 50%;
-          background-color: rgba(20, 184, 166, 0.3);
-          cursor: pointer;
-          transition: transform 0.2s ease, background-color 0.2s ease;
-        }
-
-        #videos .indicator-dot.active {
-          background-color: var(--primary-color);
-          transform: scale(1.2);
-        }
-      }
-
-      @media (max-width: 768px) {
-        #videos .shorts-grid {
-          grid-template-columns: 1fr;
-          max-width: 400px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        #videos .shorts-grid.carousel-active {
-          max-width: none;
-          padding: 10px 0;
-        }
-
-        #videos .shorts-grid.carousel-active .shorts-item {
-          flex: 0 0 90%;
-        }
-      }
-
-      @media (max-width: 576px) {
-        #videos .shorts-grid.carousel-active .shorts-item {
-          flex: 0 0 95%;
-        }
-      }
-
-      /* Estilos para o loading spinner */
-      .shorts-loading {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        min-height: 300px;
-        width: 100%;
-      }
-
-      .loading-spinner {
-        width: 50px;
-        height: 50px;
-        border: 5px solid var(--light-bg);
-        border-top: 5px solid var(--primary-color);
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin-bottom: 20px;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-
-      .shorts-loading p {
-        color: var(--text-color);
-        font-size: 1.1rem;
-      }
-
-      /* Estilos para mensagem de erro */
-      .shorts-error {
-        text-align: center;
-        padding: 40px 20px;
-        background: #fff;
-        border-radius: 15px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .shorts-error i {
-        font-size: 3rem;
-        color: var(--primary-color);
-        margin-bottom: 20px;
-      }
-
-      .shorts-error p {
-        color: var(--text-color);
-        margin-bottom: 10px;
-      }
-
-      .shorts-error .btn {
-        margin-top: 20px;
-      }
-
-      /* Adicionar estilos para os preços */
-      .valor-entrada-label {
-        display: block;
-        font-size: 1.4rem;
-        font-weight: 600;
-        color: var(--primary-color);
-        margin-bottom: 0.2rem;
-      }
-
-      .valor-entrada-value {
-        display: block;
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--primary-color);
-        line-height: 1.2;
-        margin-bottom: 0.5rem;
-      }
-
-      .plano-card.destaque .valor-entrada-label,
-      .plano-card.destaque .valor-entrada-value {
-        color: var(--primary-light);
-        text-shadow: 0 0 10px rgba(153, 246, 228, 0.3);
-      }
-
-      .plano-card.destaque .plano-parcelamento {
-        color: rgba(255, 255, 255, 0.9);
-        font-size: 1.2rem;
-        font-weight: 500;
-        margin-top: 0.5rem;
-      }
-
-      .parcelas-destaque {
-        font-weight: 700;
-        font-size: 1.1rem;
+      .inicio-section {
+        padding-top: 180px;
       }
     </style>
+
+    <!-- Script de inicialização crítico inline -->
+    <script>
+      // Carregamento otimizado de fontes
+      (function () {
+        // Verificar se o navegador suporta Font Loading API
+        if ("fonts" in document) {
+          // Fontes a carregar
+          Promise.all([
+            document.fonts.load("300 1em Montserrat"),
+            document.fonts.load("400 1em Montserrat"),
+            document.fonts.load("600 1em Montserrat"),
+          ]).then(function () {
+            document.documentElement.classList.add("fonts-loaded");
+          });
+        }
+
+        // Detectar se o navegador suporta IntersectionObserver
+        if (
+          "IntersectionObserver" in window &&
+          "IntersectionObserverEntry" in window &&
+          "intersectionRatio" in window.IntersectionObserverEntry.prototype
+        ) {
+          document.documentElement.classList.add("io-supported");
+        }
+      })();
+    </script>
+
+    <script src="build/js/loading.min.js" async></script>
   </head>
   <body>
     <!-- Header -->
@@ -586,7 +341,8 @@
             <img
               src="img/dr-joao-diniz.webp"
               alt="Dr. João Diniz - Especialista em Medicina do Esporte e Performance"
-              loading="lazy"
+              loading="eager"
+              fetchpriority="high"
               width="600"
               height="600"
               class="profile-image"
@@ -1157,6 +913,8 @@
               alt="Logo Dr. João Diniz"
               class="logo-white"
               loading="lazy"
+              width="180"
+              height="180"
             />
           </div>
           <div class="footer-menu">
@@ -1262,5 +1020,113 @@
     <script src="build/js/carousel.min.js" defer></script>
     <!-- Animate On Scroll Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <!-- Schema.org para médicos (JSON-LD) - Importante para SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "name": "Dr. João Diniz",
+        "image": "img/dr-joao-diniz.webp",
+        "description": "Médico especialista em medicina do esporte, emagrecimento, hipertrofia e rejuvenescimento masculino.",
+        "medicalSpecialty": "Medicina do Esporte",
+        "telephone": "+5511970865310",
+        "email": "contato@doutorjoaodiniz.com.br",
+        "url": "/",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Paulista, 2064 - 21º andar",
+          "addressLocality": "São Paulo",
+          "addressRegion": "SP",
+          "postalCode": "01310-200",
+          "addressCountry": "BR"
+        },
+        "sameAs": [
+          "https://instagram.com/dr.joaodiniz",
+          "https://www.youtube.com/@dr.joaodiniz"
+        ],
+        "priceRange": "R$$$",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "18:00"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Script para correção de URLs de meta tags após o carregamento da página -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Inicializar AOS
+        AOS.init({
+          duration: 800,
+          easing: "ease-in-out",
+          once: true,
+          mirror: false,
+          disable: "mobile",
+        });
+
+        // Obter a URL base atual
+        const baseUrl = window.location.origin;
+
+        // Funções para corrigir URLs
+        function updateMetaContent(selector, attribute) {
+          const elements = document.querySelectorAll(selector);
+          elements.forEach((el) => {
+            const value = el.getAttribute(attribute);
+            if (value && !value.startsWith("http") && !value.startsWith("//")) {
+              // Apenas atualizar URLs relativas
+              el.setAttribute(
+                attribute,
+                baseUrl + (value.startsWith("/") ? value : "/" + value)
+              );
+            }
+          });
+        }
+
+        // Atualizar URLs nas meta tags
+        updateMetaContent('meta[property="og:image"]', "content");
+        updateMetaContent('meta[property="og:url"]', "content");
+        updateMetaContent('meta[name="twitter:image"]', "content");
+        updateMetaContent('link[rel="canonical"]', "href");
+
+        // Atualizar JSON-LD
+        const jsonLdScript = document.querySelector(
+          'script[type="application/ld+json"]'
+        );
+        if (jsonLdScript) {
+          let jsonData = JSON.parse(jsonLdScript.textContent);
+
+          // Atualizar URLs no JSON-LD
+          if (jsonData.image && !jsonData.image.startsWith("http")) {
+            jsonData.image =
+              baseUrl +
+              (jsonData.image.startsWith("/")
+                ? jsonData.image
+                : "/" + jsonData.image);
+          }
+
+          if (jsonData.url && !jsonData.url.startsWith("http")) {
+            jsonData.url =
+              baseUrl +
+              (jsonData.url.startsWith("/")
+                ? jsonData.url
+                : "/" + jsonData.url);
+          }
+
+          // Atualizar o script com os novos valores
+          jsonLdScript.textContent = JSON.stringify(jsonData, null, 2);
+        }
+      });
+    </script>
   </body>
 </html>
