@@ -207,6 +207,51 @@
       .inicio-section {
         padding-top: 180px;
       }
+
+      /* Estilo dos botões */
+      .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.2s;
+        cursor: pointer;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn-secondary {
+        background-color: transparent;
+        color: var(--primary-color);
+        border: 2px solid var(--primary-color);
+      }
+
+      .btn-secondary:hover,
+      .btn-secondary:focus {
+        background-color: rgba(20, 184, 166, 0.1);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Remover animação de botão que não é mais usada */
+      .btn-animated span {
+        display: inline-block;
+      }
     </style>
 
     <!-- Script de inicialização crítico inline -->
@@ -335,16 +380,14 @@
               força, disposição e confiança. Você será a próxima?
             </p>
             <div class="inicio-cta">
-              <a href="#planos" class="btn btn-primary btn-animated"
-                ><span
-                  ><i class="fas fa-list-check"></i>Ver Programa Completo</span
-                ></a
+              <a href="#planos" class="btn btn-primary"
+                ><i class="fas fa-list-check"></i> Ver Programa Completo</a
               >
               <a
                 href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação"
                 class="btn btn-secondary"
                 target="_blank"
-                ><i class="fas fa-calendar-check"></i>Agende sua Avaliação</a
+                ><i class="fas fa-calendar-check"></i> Agende sua Avaliação</a
               >
             </div>
           </div>
@@ -613,11 +656,9 @@
             <div class="plano-cta">
               <a
                 href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20plano%20Ultra%20Men%20(Entrada%20R$%201.800%20%2B%2018x%20R$%20889%2C00)"
-                class="btn btn-primary btn-animated"
+                class="btn btn-primary"
                 target="_blank"
-                ><span
-                  ><i class="fas fa-calendar-check"></i> Agendar Consulta</span
-                ></a
+                ><i class="fas fa-calendar-check"></i> Agendar Consulta</a
               >
             </div>
           </div>
