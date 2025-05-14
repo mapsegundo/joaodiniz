@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <!-- DNS Prefetch para CDNs -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://unpkg.com" />
+
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="build/css/style.min.css" as="style" />
+    <link rel="preload" href="build/css/responsive.min.css" as="style" />
+    <link
+      rel="preload"
+      href="build/img/logo-dr-joao-diniz.png"
+      as="image"
+      type="image/png"
+    />
+
+    <!-- Apenas os ícones necessários da Font Awesome -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      as="style"
+    />
+
+    <!-- SEO Meta Tags -->
+    <title>Serviços Exclusivos - Dr. João Diniz | Medicina do Esporte</title>
+    <meta
+      name="description"
+      content="Procedimentos exclusivos para potencializar seus resultados: Infiltração Articular, Lipoenzimática Localizada e mais. Transformação física com base médica."
+    />
+    <meta
+      name="keywords"
+      content="infiltração articular, lipoenzimática localizada, procedimentos estéticos, medicina esportiva, dr joão diniz"
+    />
+    <meta name="author" content="Dr. João Diniz" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="/servicos.html" />
+
+    <!-- Open Graph Meta Tags (para Facebook, LinkedIn) -->
+    <meta
+      property="og:title"
+      content="Serviços Exclusivos - Dr. João Diniz | Medicina do Esporte"
+    />
+    <meta
+      property="og:description"
+      content="Procedimentos exclusivos para potencializar seus resultados: Infiltração Articular, Lipoenzimática Localizada e mais."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/servicos.html" />
+    <meta property="og:image" content="build/img/infiltracao-articular.webp" />
+    <meta
+      property="og:site_name"
+      content="Dr. João Diniz - Medicina Esportiva"
+    />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Serviços Exclusivos - Dr. João Diniz | Medicina do Esporte"
+    />
+    <meta
+      name="twitter:description"
+      content="Procedimentos exclusivos para potencializar seus resultados: Infiltração Articular, Lipoenzimática Localizada e mais."
+    />
+    <meta name="twitter:image" content="build/img/infiltracao-articular.webp" />
+
+    <!-- Controle de cache -->
+    <meta http-equiv="Cache-Control" content="max-age=604800, public" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="build/css/style.min.css" />
+    <link rel="stylesheet" href="build/css/responsive.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Font Awesome otimizado -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Animate On Scroll Library -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- CSS não crítico -->
+    <link
+      rel="stylesheet"
+      href="build/css/prices.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <link rel="stylesheet" href="build/css/prices.min.css" />
+    </noscript>
+
+    <!-- Styles críticos inline para melhorar o First Contentful Paint -->
+    <style>
+      /* Estilos críticos para a primeira renderização */
+      :root {
+        --primary-color: #14b8a6;
+        --primary-dark: #0f766e;
+        --text-light: #f8fafc;
+        --text-dark: #0f172a;
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --font-primary: "Montserrat", sans-serif;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-primary);
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: var(--shadow-md);
+      }
+
+      /* Estilos específicos para página de serviços */
+      .servicos-section {
+        padding: 180px 0 80px;
+      }
+
+      .servico-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      @media (min-width: 992px) {
+        .servico-card {
+          flex-direction: row;
+          align-items: stretch;
+        }
+      }
+
+      .servico-img {
+        flex: 0 0 100%;
+        max-width: 100%;
+        height: 250px;
+        overflow: hidden;
+      }
+
+      @media (min-width: 992px) {
+        .servico-img {
+          flex: 0 0 40%;
+          max-width: 40%;
+          height: auto;
+        }
+      }
+
+      .servico-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      .servico-card:hover .servico-img img {
+        transform: scale(1.05);
+      }
+
+      .servico-conteudo {
+        padding: 30px;
+        flex: 1;
+      }
+
+      .servico-titulo {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 10px;
+        font-weight: 700;
+      }
+
+      .servico-subtitulo {
+        font-size: 1rem;
+        color: var(--text-gray);
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+
+      .servico-beneficios {
+        margin-bottom: 25px;
+      }
+
+      .servico-beneficios li {
+        margin-bottom: 8px;
+        position: relative;
+        padding-left: 25px;
+      }
+
+      .servico-beneficios li i {
+        color: var(--primary-color);
+        position: absolute;
+        left: 0;
+        top: 5px;
+      }
+
+      .servico-preco {
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: var(--primary-color);
+      }
+
+      .servico-indicado {
+        font-size: 0.9rem;
+        color: var(--text-gray);
+      }
+
+      .servicos-extras {
+        background-color: var(--bg-gray);
+        padding: 60px 0;
+      }
+
+      .servicos-extras-container {
+        background: linear-gradient(
+          135deg,
+          var(--primary-dark),
+          var(--text-dark) 90%
+        );
+        border-radius: 12px;
+        padding: 40px;
+        color: white;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      .servicos-extras-titulo {
+        color: var(--primary-light);
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+
+      .servicos-extras-pontos {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+      }
+
+      .extras-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .extras-item i {
+        font-size: 1.5rem;
+        color: var(--primary-light);
+        flex-shrink: 0;
+      }
+
+      .servicos-cta {
+        text-align: center;
+        margin-top: 40px;
+      }
+
+      .servicos-cta h3 {
+        margin-bottom: 20px;
+        font-size: 1.4rem;
+        color: white;
+      }
+
+      .servicos-cta p {
+        margin-bottom: 30px;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .servicos-badges {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .servicos-badge {
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 8px 15px;
+        border-radius: 30px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .servicos-badge i {
+        color: var(--primary-light);
+      }
+    </style>
+
+    <!-- Script de inicialização crítico inline -->
+    <script>
+      // Carregamento otimizado de fontes
+      (function () {
+        // Verificar se o navegador suporta Font Loading API
+        if ("fonts" in document) {
+          // Fontes a carregar
+          Promise.all([
+            document.fonts.load("300 1em Montserrat"),
+            document.fonts.load("400 1em Montserrat"),
+            document.fonts.load("600 1em Montserrat"),
+          ]).then(function () {
+            document.documentElement.classList.add("fonts-loaded");
+          });
+        }
+
+        // Detectar se o navegador suporta IntersectionObserver
+        if (
+          "IntersectionObserver" in window &&
+          "IntersectionObserverEntry" in window &&
+          "intersectionRatio" in window.IntersectionObserverEntry.prototype
+        ) {
+          document.documentElement.classList.add("io-supported");
+        }
+      })();
+    </script>
+
+    <script src="build/js/loading.min.js" async></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="index.html" aria-label="Dr. João Diniz - Página inicial">
+              <img
+                src="build/img/logo-dr-joao-diniz.png"
+                alt="Logo Dr. João Diniz - Medicina do Esporte"
+                width="140"
+                height="140"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <nav class="main-menu" aria-label="Menu Principal">
+            <ul>
+              <li>
+                <a href="index.html#inicio" aria-label="Ir para seção início"
+                  >Início</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#diferenciais"
+                  aria-label="Ir para seção diferenciais"
+                  >Diferenciais</a
+                >
+              </li>
+              <li>
+                <a href="index.html#sobre" aria-label="Ir para seção sobre"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <a href="index.html#planos" aria-label="Ir para seção planos"
+                  >Planos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="servicos.html"
+                  aria-label="Ir para página de serviços"
+                  class="active"
+                  >Serviços</a
+                >
+              </li>
+              <li>
+                <a href="cursos.html" aria-label="Ir para página de cursos"
+                  >Cursos</a
+                >
+              </li>
+            </ul>
+            <div class="header-cta mobile-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+                aria-label="Agendar Consulta via WhatsApp"
+                >Agendar Consulta</a
+              >
+            </div>
+          </nav>
+          <div class="header-cta desktop-cta">
+            <a
+              href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+              aria-label="Agendar Consulta via WhatsApp"
+              >Agendar Consulta</a
+            >
+          </div>
+          <div
+            class="mobile-menu-btn"
+            aria-label="Abrir menu mobile"
+            role="button"
+            tabindex="0"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="mobile-menu-overlay"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Serviços Section -->
+    <section id="servicos" class="servicos-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h1>Procedimentos Exclusivos para Potencializar Resultados</h1>
+          <p>Tecnologia e ciência médica a favor da sua transformação</p>
+        </div>
+
+        <!-- Infiltração Articular -->
+        <div class="servico-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="servico-img">
+            <img
+              src="build/img/infiltracao-articular.webp"
+              alt="Infiltração Articular de Alta Performance"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div class="servico-conteudo">
+            <h2 class="servico-titulo">
+              🔹 Infiltração Articular de Alta Performance
+            </h2>
+            <p class="servico-subtitulo">
+              Para dores persistentes em joelho ou ombro que limitam seu treino
+              ou rotina.
+            </p>
+
+            <ul class="servico-beneficios">
+              <li>
+                <i class="fas fa-check"></i> Aplicação intra-articular de Ácido
+                Hialurônico ou Corticoide + Anestésico
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Alívio rápido da dor, melhora da
+                função e retomada do desempenho
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Indicação médica precisa, feita por
+                especialista em medicina esportiva
+              </li>
+            </ul>
+
+            <div class="servico-preco">💳 A partir de 2x R$ 550,00</div>
+
+            <p class="servico-indicado">
+              📌 Ideal para quem quer treinar com potência e sem limitações
+              articulares
+            </p>
+
+            <div class="plano-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20procedimento%20de%20Infiltra%C3%A7%C3%A3o%20Articular"
+                class="btn btn-primary"
+                target="_blank"
+                ><i class="fas fa-calendar-check"></i> Agendar Consulta</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Lipoenzimática Localizada -->
+        <div class="servico-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="servico-img">
+            <img
+              src="build/img/lipoenzimatica-localizada.webp"
+              alt="Lipoenzimática Localizada – Redução de Medidas Sem Cirurgia"
+              loading="lazy"
+              width="600"
+              height="400"
+            />
+          </div>
+          <div class="servico-conteudo">
+            <h2 class="servico-titulo">
+              🔹 Lipoenzimática Localizada – Redução de Medidas Sem Cirurgia
+            </h2>
+            <p class="servico-subtitulo">
+              Porque esforço sem refinamento não traz o corpo dos seus sonhos.
+            </p>
+
+            <ul class="servico-beneficios">
+              <li>
+                <i class="fas fa-check"></i> Avaliação detalhada de gordura
+                localizada
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Aplicações pontuais em abdômen,
+                flancos, costas ou região peitoral
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Protocolo individualizado com foco
+                em definição e simetria estética
+              </li>
+            </ul>
+
+            <div class="servico-preco">💳 A partir de 3x R$ 390,00</div>
+
+            <p class="servico-indicado">
+              📌 Perfeito para quem já treina, mas quer definição de alto padrão
+            </p>
+
+            <div class="plano-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20procedimento%20de%20Lipoenzimatica%20Localizada"
+                class="btn btn-primary"
+                target="_blank"
+                ><i class="fas fa-calendar-check"></i> Agendar Consulta</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Serviços Extras Section -->
+    <section class="servicos-extras">
+      <div class="container">
+        <div class="servicos-extras-container" data-aos="fade-up">
+          <h2 class="servicos-extras-titulo">
+            Potencialize Seus Resultados com os Procedimentos!
+          </h2>
+
+          <div class="servicos-extras-pontos">
+            <div class="extras-item" data-aos="fade-up" data-aos-delay="100">
+              <i class="fas fa-link"></i>
+              <div>
+                <p>
+                  Procedimentos com condição especial para pacientes dos Planos
+                  Black ou UltraMen
+                </p>
+              </div>
+            </div>
+
+            <div class="extras-item" data-aos="fade-up" data-aos-delay="200">
+              <i class="fas fa-flask"></i>
+              <div>
+                <p>
+                  Composição corporal ideal exige mais que treino e dieta: use a
+                  tecnologia e a ciência a seu favor
+                </p>
+              </div>
+            </div>
+
+            <div class="extras-item" data-aos="fade-up" data-aos-delay="300">
+              <i class="fas fa-trophy"></i>
+              <div>
+                <p>
+                  Performance e estética no mais alto nível – sem desculpas, sem
+                  limites
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="servicos-cta" data-aos="fade-up" data-aos-delay="400">
+            <h3>
+              Sua transformação começa com uma decisão. Agende sua avaliação
+              agora.
+            </h3>
+
+            <div class="servicos-badges">
+              <div class="servicos-badge">
+                <i class="fas fa-user-md"></i> Atendimento personalizado
+              </div>
+              <div class="servicos-badge">
+                <i class="fas fa-users"></i> Equipe de elite
+              </div>
+              <div class="servicos-badge">
+                <i class="fas fa-chart-line"></i> Resultados garantidos
+              </div>
+            </div>
+
+            <div class="plano-cta" style="margin-top: 30px">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20para%20os%20procedimentos"
+                class="btn btn-primary"
+                target="_blank"
+                ><i class="fas fa-calendar-check"></i> Agendar Avaliação</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img
+              src="build/img/logo-dr-joao-diniz.png"
+              alt="Logo Dr. João Diniz"
+              class="logo-white"
+              loading="lazy"
+              width="180"
+              height="180"
+            />
+          </div>
+          <div class="footer-menu">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="index.html#inicio">Início</a></li>
+              <li><a href="index.html#diferenciais">Diferenciais</a></li>
+              <li><a href="index.html#sobre">Sobre</a></li>
+              <li><a href="index.html#planos">Planos</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="cursos.html">Cursos</a></li>
+              <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-contato">
+            <h4>Contato</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Av. Paulista, 2064 - 21º
+              andar - Bela Vista, São Paulo - SP, 01310-200
+            </p>
+            <p><i class="fas fa-phone-alt"></i> (11) 97086-5310</p>
+            <p><i class="fas fa-envelope"></i> doutorjoaodiniz@gmail.com</p>
+          </div>
+          <div class="footer-social">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a
+                href="https://instagram.com/dr.joaodiniz"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram do Dr. João Diniz"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@dr.joaodiniz"
+                target="_blank"
+                rel="noopener"
+                aria-label="Canal do YouTube do Dr. João Diniz"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp do Dr. João Diniz"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Dr. João Diniz - Medicina do Esporte | CRM-SP 255.027.
+            Todos os direitos reservados.
+          </p>
+          <p>
+            Desenvolvido por
+            <a href="https://www.linkedin.com/in/marshallpaiva/" target="_blank"
+              >Marshall Paiva</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a
+      href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20procedimentos"
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener"
+      aria-label="Fale com o Dr. João Diniz via WhatsApp"
+      data-aos="zoom-in"
+      data-aos-delay="800"
+      data-aos-offset="0"
+      data-aos-once="false"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      aria-label="Voltar ao topo da página"
+      data-aos="fade-up"
+      data-aos-delay="800"
+      data-aos-offset="0"
+      data-aos-once="false"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="build/js/script.min.js" defer></script>
+
+    <!-- Animate On Scroll Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <!-- Schema.org para médicos (JSON-LD) - Importante para SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalProcedure",
+        "name": "Procedimentos Exclusivos Dr. João Diniz",
+        "description": "Procedimentos médicos para potencializar resultados: Infiltração Articular e Lipoenzimática Localizada realizados por médico especialista em medicina esportiva.",
+        "procedureType": "https://schema.org/MedicalTherapy",
+        "howPerformed": "Aplicações realizadas por médico especialista com formação em medicina do esporte",
+        "preparation": "Avaliação médica inicial e planejamento personalizado",
+        "followup": "Acompanhamento médico durante todo o tratamento",
+        "procedureProvider": {
+          "@type": "Physician",
+          "name": "Dr. João Diniz",
+          "medicalSpecialty": "Medicina do Esporte",
+          "telephone": "+5511970865310",
+          "email": "doutorjoaodiniz@gmail.com",
+          "url": "https://joaodiniz.vercel.app",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Av. Paulista, 2064 - 21º andar",
+            "addressLocality": "São Paulo",
+            "addressRegion": "SP",
+            "postalCode": "01310-200",
+            "addressCountry": "BR"
+          }
+        }
+      }
+    </script>
+
+    <!-- Script para correção de URLs de meta tags após o carregamento da página -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Inicializar AOS
+        AOS.init({
+          duration: 800,
+          easing: "ease-in-out",
+          once: true,
+          mirror: false,
+          disable: "mobile",
+        });
+
+        // Obter a URL base atual
+        const baseUrl = window.location.origin;
+
+        // Funções para corrigir URLs
+        function updateMetaContent(selector, attribute) {
+          const elements = document.querySelectorAll(selector);
+          elements.forEach((el) => {
+            const value = el.getAttribute(attribute);
+            if (value && !value.startsWith("http") && !value.startsWith("//")) {
+              // Apenas atualizar URLs relativas
+              el.setAttribute(
+                attribute,
+                baseUrl + (value.startsWith("/") ? value : "/" + value)
+              );
+            }
+          });
+        }
+
+        // Atualizar URLs nas meta tags
+        updateMetaContent('meta[property="og:image"]', "content");
+        updateMetaContent('meta[property="og:url"]', "content");
+        updateMetaContent('meta[name="twitter:image"]', "content");
+        updateMetaContent('link[rel="canonical"]', "href");
+
+        // Atualizar JSON-LD
+        const jsonLdScript = document.querySelector(
+          'script[type="application/ld+json"]'
+        );
+        if (jsonLdScript) {
+          let jsonData = JSON.parse(jsonLdScript.textContent);
+
+          // Atualizar URLs no JSON-LD
+          if (jsonData.image && !jsonData.image.startsWith("http")) {
+            jsonData.image =
+              baseUrl +
+              (jsonData.image.startsWith("/")
+                ? jsonData.image
+                : "/" + jsonData.image);
+          }
+
+          if (jsonData.url && !jsonData.url.startsWith("http")) {
+            jsonData.url =
+              baseUrl +
+              (jsonData.url.startsWith("/")
+                ? jsonData.url
+                : "/" + jsonData.url);
+          }
+
+          // Atualizar o script com os novos valores
+          jsonLdScript.textContent = JSON.stringify(jsonData, null, 2);
+        }
+      });
+    </script>
+
+    <script>
+      // Verificar se existe o objeto 'performance' e a API 'navigation'
+      if (performance && performance.navigation) {
+        // Detectar se a navegação é reload ou forward/back
+        if (performance.navigation.type === 1) {
+          // É um reload, então carregar imagens otimizadas diretamente
+          document.addEventListener("DOMContentLoaded", function () {
+            var images = document.querySelectorAll('img[loading="lazy"]');
+            for (var i = 0; i < images.length; i++) {
+              images[i].setAttribute("loading", "eager");
+            }
+          });
+        }
+      }
+
+      // Detecção e suporte para lazy loading nativo
+      if ("loading" in HTMLImageElement.prototype) {
+        document.documentElement.classList.add("lazyload-supported");
+      } else {
+        // Polyfill para lazy loading em navegadores que não suportam nativamente
+        document.addEventListener("DOMContentLoaded", function () {
+          var lazyImages = [].slice.call(
+            document.querySelectorAll('img[loading="lazy"]')
+          );
+
+          if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function (
+              entries,
+              observer
+            ) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  let lazyImage = entry.target;
+                  lazyImage.src = lazyImage.dataset.src || lazyImage.src;
+                  lazyImage.srcset = lazyImage.dataset.srcset || "";
+                  lazyImage.classList.remove("lazy");
+                  lazyImageObserver.unobserve(lazyImage);
+                }
+              });
+            });
+
+            lazyImages.forEach(function (lazyImage) {
+              lazyImageObserver.observe(lazyImage);
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

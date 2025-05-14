@@ -10,14 +10,23 @@
     <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
     <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
     <link rel="dns-prefetch" href="https://unpkg.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://unpkg.com" crossorigin />
 
     <!-- Preload de recursos críticos -->
-    <link rel="preload" href="css/style.css" as="style" />
-    <link rel="preload" href="css/responsive.css" as="style" />
-    <link rel="preload" href="img/logo-dr-joao-diniz.png" as="image" />
+    <link rel="preload" href="build/css/style.min.css" as="style" />
+    <link rel="preload" href="build/css/responsive.min.css" as="style" />
     <link
       rel="preload"
-      href="img/dr-joao-diniz.webp"
+      href="build/img/logo-dr-joao-diniz.png"
+      as="image"
+      type="image/png"
+    />
+    <link
+      rel="preload"
+      href="build/img/dr-joao-diniz.webp"
       as="image"
       type="image/webp"
     />
@@ -69,7 +78,7 @@
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="/" />
-    <meta property="og:image" content="img/dr-joao-diniz.webp" />
+    <meta property="og:image" content="build/img/dr-joao-diniz.webp" />
     <meta
       property="og:site_name"
       content="Dr. João Diniz - Medicina Esportiva"
@@ -86,14 +95,14 @@
       name="twitter:description"
       content="Transformação física com bases médicas sólidas. Especialista em emagrecimento, hipertrofia e rejuvenescimento masculino."
     />
-    <meta name="twitter:image" content="img/dr-joao-diniz.webp" />
+    <meta name="twitter:image" content="build/img/dr-joao-diniz.webp" />
 
     <!-- Controle de cache -->
     <meta http-equiv="Cache-Control" content="max-age=604800, public" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="build/css/style.min.css" />
+    <link rel="stylesheet" href="build/css/responsive.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -131,13 +140,13 @@
     <!-- CSS não crítico -->
     <link
       rel="stylesheet"
-      href="css/shorts.css"
+      href="build/css/shorts.min.css"
       media="print"
       onload="this.media='all'"
     />
     <link
       rel="stylesheet"
-      href="css/prices.css"
+      href="build/css/prices.min.css"
       media="print"
       onload="this.media='all'"
     />
@@ -159,8 +168,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
       />
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-      <link rel="stylesheet" href="css/shorts.css" />
-      <link rel="stylesheet" href="css/prices.css" />
+      <link rel="stylesheet" href="build/css/shorts.min.css" />
+      <link rel="stylesheet" href="build/css/prices.min.css" />
     </noscript>
 
     <!-- Styles críticos inline para melhorar o First Contentful Paint -->
@@ -237,7 +246,7 @@
           <div class="logo">
             <a href="index.html" aria-label="Dr. João Diniz - Página inicial">
               <img
-                src="img/logo-dr-joao-diniz.png"
+                src="build/img/logo-dr-joao-diniz.png"
                 alt="Logo Dr. João Diniz - Medicina do Esporte"
                 width="140"
                 height="140"
@@ -262,11 +271,13 @@
                 <a href="#planos" aria-label="Ir para seção planos">Planos</a>
               </li>
               <li>
-                <a href="#faq" aria-label="Ir para seção FAQ">FAQ</a>
+                <a href="servicos.html" aria-label="Ir para página de serviços"
+                  >Serviços</a
+                >
               </li>
               <li>
-                <a href="#contato" aria-label="Ir para seção contato"
-                  >Contato</a
+                <a href="cursos.html" aria-label="Ir para página de cursos"
+                  >Cursos</a
                 >
               </li>
             </ul>
@@ -339,7 +350,7 @@
           </div>
           <div class="inicio-image" data-aos="fade-left" data-aos-delay="300">
             <img
-              src="img/dr-joao-diniz.webp"
+              src="build/img/dr-joao-diniz.webp"
               alt="Dr. João Diniz - Especialista em Medicina do Esporte e Performance"
               loading="eager"
               fetchpriority="high"
@@ -467,7 +478,7 @@
         <div class="sobre-content">
           <div class="sobre-image" data-aos="fade-right" data-aos-delay="100">
             <img
-              src="img/dr-joao-competicao.webp"
+              src="build/img/dr-joao-competicao.webp"
               alt="Dr. João Diniz MuscleContest 2022"
               loading="lazy"
               width="500"
@@ -844,7 +855,7 @@
                 <i class="fas fa-envelope"></i>
                 <div>
                   <h4>Email</h4>
-                  <p>contato@doutorjoaodiniz.com.br</p>
+                  <p>doutorjoaodiniz@gmail.com</p>
                 </div>
               </div>
               <div class="contato-item">
@@ -909,7 +920,7 @@
         <div class="footer-top">
           <div class="footer-logo">
             <img
-              src="img/logo-dr-joao-diniz.png"
+              src="build/img/logo-dr-joao-diniz.png"
               alt="Logo Dr. João Diniz"
               class="logo-white"
               loading="lazy"
@@ -926,6 +937,8 @@
               <li><a href="#numeros">Resultados</a></li>
               <li><a href="#sobre">Sobre</a></li>
               <li><a href="#planos">Planos</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="cursos.html">Cursos</a></li>
               <li><a href="#faq">FAQ</a></li>
               <li><a href="#contato">Contato</a></li>
             </ul>
@@ -937,9 +950,7 @@
               andar - Bela Vista, São Paulo - SP, 01310-200
             </p>
             <p><i class="fas fa-phone-alt"></i> (11) 97086-5310</p>
-            <p>
-              <i class="fas fa-envelope"></i> contato@doutorjoaodiniz.com.br
-            </p>
+            <p><i class="fas fa-envelope"></i> doutorjoaodiniz@gmail.com</p>
           </div>
           <div class="footer-social">
             <h4>Redes Sociais</h4>
@@ -1027,12 +1038,12 @@
         "@context": "https://schema.org",
         "@type": "Physician",
         "name": "Dr. João Diniz",
-        "image": "img/dr-joao-diniz.webp",
+        "image": "build/img/dr-joao-diniz.webp",
         "description": "Médico especialista em medicina do esporte, emagrecimento, hipertrofia e rejuvenescimento masculino.",
         "medicalSpecialty": "Medicina do Esporte",
         "telephone": "+5511970865310",
-        "email": "contato@doutorjoaodiniz.com.br",
-        "url": "/",
+        "email": "doutorjoaodiniz@gmail.com",
+        "url": "https://joaodiniz.vercel.app",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Av. Paulista, 2064 - 21º andar",
@@ -1127,6 +1138,55 @@
           jsonLdScript.textContent = JSON.stringify(jsonData, null, 2);
         }
       });
+    </script>
+
+    <script>
+      // Verificar se existe o objeto 'performance' e a API 'navigation'
+      if (performance && performance.navigation) {
+        // Detectar se a navegação é reload ou forward/back
+        if (performance.navigation.type === 1) {
+          // É um reload, então carregar imagens otimizadas diretamente
+          document.addEventListener("DOMContentLoaded", function () {
+            var images = document.querySelectorAll('img[loading="lazy"]');
+            for (var i = 0; i < images.length; i++) {
+              images[i].setAttribute("loading", "eager");
+            }
+          });
+        }
+      }
+
+      // Detecção e suporte para lazy loading nativo
+      if ("loading" in HTMLImageElement.prototype) {
+        document.documentElement.classList.add("lazyload-supported");
+      } else {
+        // Polyfill para lazy loading em navegadores que não suportam nativamente
+        document.addEventListener("DOMContentLoaded", function () {
+          var lazyImages = [].slice.call(
+            document.querySelectorAll('img[loading="lazy"]')
+          );
+
+          if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function (
+              entries,
+              observer
+            ) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  let lazyImage = entry.target;
+                  lazyImage.src = lazyImage.dataset.src || lazyImage.src;
+                  lazyImage.srcset = lazyImage.dataset.srcset || "";
+                  lazyImage.classList.remove("lazy");
+                  lazyImageObserver.unobserve(lazyImage);
+                }
+              });
+            });
+
+            lazyImages.forEach(function (lazyImage) {
+              lazyImageObserver.observe(lazyImage);
+            });
+          }
+        });
+      }
     </script>
   </body>
 </html>

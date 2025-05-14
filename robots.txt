@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://www.doutorjoaodiniz.com.br/sitemap.xml
+Sitemap: https://joaodiniz.vercel.app/sitemap.xml
 
 # Tempo entre as requisições (em segundos)
 Crawl-delay: 10

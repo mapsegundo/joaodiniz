@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+
+    <!-- DNS Prefetch para CDNs -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://unpkg.com" />
+
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="build/css/style.min.css" as="style" />
+    <link rel="preload" href="build/css/responsive.min.css" as="style" />
+    <link
+      rel="preload"
+      href="build/img/logo-dr-joao-diniz.png"
+      as="image"
+      type="image/png"
+    />
+
+    <!-- Apenas os ícones necessários da Font Awesome -->
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      as="style"
+    />
+
+    <!-- SEO Meta Tags -->
+    <title>Cursos Médicos - Dr. João Diniz | Medicina do Esporte</title>
+    <meta
+      name="description"
+      content="Cursos especializados em Medicina do Esporte com padrão USP: MACRO (Métodos Avançados de Controle e Remissão da Obesidade) e MACRE (Manejo Avançado da Cardiotoxicidade e Restauração do Eixo)."
+    />
+    <meta
+      name="keywords"
+      content="cursos médicos, medicina esportiva, obesidade, esteroides anabolizantes, USP, dr joão diniz"
+    />
+    <meta name="author" content="Dr. João Diniz" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="/cursos.html" />
+
+    <!-- Open Graph Meta Tags (para Facebook, LinkedIn) -->
+    <meta
+      property="og:title"
+      content="Cursos Médicos - Dr. João Diniz | Medicina do Esporte"
+    />
+    <meta
+      property="og:description"
+      content="Cursos especializados em Medicina do Esporte com padrão USP: MACRO (Métodos Avançados de Controle e Remissão da Obesidade) e MACRE (Manejo Avançado da Cardiotoxicidade)."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="/cursos.html" />
+    <meta property="og:image" content="build/img/curso-macro.webp" />
+    <meta
+      property="og:site_name"
+      content="Dr. João Diniz - Medicina Esportiva"
+    />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Cursos Médicos - Dr. João Diniz | Medicina do Esporte"
+    />
+    <meta
+      name="twitter:description"
+      content="Cursos especializados em Medicina do Esporte com padrão USP: MACRO (Métodos Avançados de Controle e Remissão da Obesidade) e MACRE (Manejo Avançado da Cardiotoxicidade)."
+    />
+    <meta name="twitter:image" content="build/img/curso-macro.webp" />
+
+    <!-- Controle de cache -->
+    <meta http-equiv="Cache-Control" content="max-age=604800, public" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="build/css/style.min.css" />
+    <link rel="stylesheet" href="build/css/responsive.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Font Awesome otimizado -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- Animate On Scroll Library -->
+    <link
+      href="https://unpkg.com/aos@2.3.1/dist/aos.css"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <!-- CSS não crítico -->
+    <link
+      rel="stylesheet"
+      href="build/css/prices.min.css"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css"
+      />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
+      />
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <link rel="stylesheet" href="build/css/prices.min.css" />
+    </noscript>
+
+    <!-- Styles críticos inline para melhorar o First Contentful Paint -->
+    <style>
+      /* Estilos críticos para a primeira renderização */
+      :root {
+        --primary-color: #14b8a6;
+        --primary-dark: #0f766e;
+        --primary-light: #99f6e4;
+        --text-light: #f8fafc;
+        --text-dark: #0f172a;
+        --text-gray: #64748b;
+        --bg-gray: #f1f5f9;
+        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --font-primary: "Montserrat", sans-serif;
+        --border-radius-lg: 12px;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: var(--font-primary);
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+      #header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: rgba(255, 255, 255, 0.95);
+        box-shadow: var(--shadow-md);
+      }
+
+      /* Estilos específicos para página de cursos */
+      .cursos-section {
+        padding: 180px 0 80px;
+      }
+
+      .curso-card {
+        background: #fff;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 60px;
+        position: relative;
+      }
+
+      .curso-header {
+        background: linear-gradient(
+          135deg,
+          var(--primary-dark),
+          var(--text-dark)
+        );
+        padding: 25px 30px;
+        position: relative;
+      }
+
+      .curso-tag {
+        position: absolute;
+        top: 0;
+        right: 30px;
+        background: var(--primary-color);
+        color: #fff;
+        font-size: 0.85rem;
+        font-weight: 700;
+        padding: 5px 15px;
+        border-radius: 0 0 8px 8px;
+      }
+
+      .curso-titulo {
+        color: #fff;
+        margin: 0;
+        font-size: 1.8rem;
+        font-weight: 700;
+      }
+
+      .curso-subtitulo {
+        color: var(--primary-light);
+        margin-top: 5px;
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      .curso-conteudo {
+        padding: 30px;
+      }
+
+      .curso-descricao {
+        margin-bottom: 25px;
+        font-size: 1.05rem;
+        line-height: 1.7;
+      }
+
+      .curso-destaque {
+        font-weight: 600;
+        color: var(--primary-dark);
+      }
+
+      .curso-pontos {
+        margin: 30px 0;
+      }
+
+      .curso-pontos ol {
+        padding-left: 20px;
+      }
+
+      .curso-pontos li {
+        margin-bottom: 15px;
+        position: relative;
+        padding-left: 5px;
+      }
+
+      .curso-footer {
+        background: var(--bg-gray);
+        padding: 25px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .curso-cta {
+        text-align: center;
+      }
+
+      /* Estilo retangular padronizado para botões */
+      .btn {
+        display: inline-block;
+        padding: 12px 25px;
+        background-color: var(--primary-color);
+        color: var(--text-light);
+        border: none;
+        border-radius: 5px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background-color 0.3s, transform 0.2s;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+      }
+
+      .btn-primary:hover,
+      .btn-primary:focus {
+        background-color: var(--primary-dark);
+        transform: translateY(-2px);
+      }
+
+      /* Seção de credenciais */
+      .credenciais-section {
+        background-color: var(--bg-gray);
+        padding: 70px 0;
+      }
+
+      .credenciais-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .credencial-item {
+        background: #fff;
+        text-align: center;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .credencial-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .credencial-titulo {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        color: var(--primary-dark);
+        font-weight: 700;
+      }
+
+      .credencial-valor {
+        font-size: 1.5rem;
+        color: var(--text-dark);
+        font-weight: 600;
+      }
+
+      /* Responsividade */
+      @media (max-width: 768px) {
+        .curso-header {
+          padding: 20px;
+        }
+
+        .curso-titulo {
+          font-size: 1.5rem;
+        }
+
+        .curso-conteudo {
+          padding: 20px;
+        }
+
+        .curso-tag {
+          position: static;
+          display: inline-block;
+          margin-bottom: 10px;
+          border-radius: 4px;
+        }
+      }
+    </style>
+
+    <!-- Script de inicialização crítico inline -->
+    <script>
+      // Carregamento otimizado de fontes
+      (function () {
+        // Verificar se o navegador suporta Font Loading API
+        if ("fonts" in document) {
+          // Fontes a carregar
+          Promise.all([
+            document.fonts.load("300 1em Montserrat"),
+            document.fonts.load("400 1em Montserrat"),
+            document.fonts.load("600 1em Montserrat"),
+          ]).then(function () {
+            document.documentElement.classList.add("fonts-loaded");
+          });
+        }
+
+        // Detectar se o navegador suporta IntersectionObserver
+        if (
+          "IntersectionObserver" in window &&
+          "IntersectionObserverEntry" in window &&
+          "intersectionRatio" in window.IntersectionObserverEntry.prototype
+        ) {
+          document.documentElement.classList.add("io-supported");
+        }
+      })();
+    </script>
+
+    <script src="build/js/loading.min.js" async></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="container">
+        <div class="header-wrapper">
+          <div class="logo">
+            <a href="index.html" aria-label="Dr. João Diniz - Página inicial">
+              <img
+                src="build/img/logo-dr-joao-diniz.png"
+                alt="Logo Dr. João Diniz - Medicina do Esporte"
+                width="140"
+                height="140"
+                loading="lazy"
+              />
+            </a>
+          </div>
+          <nav class="main-menu" aria-label="Menu Principal">
+            <ul>
+              <li>
+                <a href="index.html#inicio" aria-label="Ir para seção início"
+                  >Início</a
+                >
+              </li>
+              <li>
+                <a
+                  href="index.html#diferenciais"
+                  aria-label="Ir para seção diferenciais"
+                  >Diferenciais</a
+                >
+              </li>
+              <li>
+                <a href="index.html#sobre" aria-label="Ir para seção sobre"
+                  >Sobre</a
+                >
+              </li>
+              <li>
+                <a href="index.html#planos" aria-label="Ir para seção planos"
+                  >Planos</a
+                >
+              </li>
+              <li>
+                <a href="servicos.html" aria-label="Ir para página de serviços"
+                  >Serviços</a
+                >
+              </li>
+              <li>
+                <a
+                  href="cursos.html"
+                  aria-label="Ir para página de cursos"
+                  class="active"
+                  >Cursos</a
+                >
+              </li>
+            </ul>
+            <div class="header-cta mobile-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20cursos"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+                aria-label="Informações sobre cursos via WhatsApp"
+                >Saiba Mais</a
+              >
+            </div>
+          </nav>
+          <div class="header-cta desktop-cta">
+            <a
+              href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20cursos"
+              class="btn btn-primary"
+              target="_blank"
+              rel="noopener"
+              aria-label="Informações sobre cursos via WhatsApp"
+              >Saiba Mais</a
+            >
+          </div>
+          <div
+            class="mobile-menu-btn"
+            aria-label="Abrir menu mobile"
+            role="button"
+            tabindex="0"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <div class="mobile-menu-overlay"></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Cursos Section -->
+    <section id="cursos" class="cursos-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h1>Cursos Médicos Especializados</h1>
+          <p>Formação avançada em Medicina do Esporte com padrão USP</p>
+        </div>
+
+        <!-- Curso MACRO -->
+        <div class="curso-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="curso-header">
+            <span class="curso-tag">Exclusivo para Médicos</span>
+            <h2 class="curso-titulo">
+              🧠 Curso Métodos Avançados de Controle e Remissão da Obesidade
+              (MACRO)
+            </h2>
+            <p class="curso-subtitulo">Com especialistas da USP</p>
+          </div>
+          <div class="curso-conteudo">
+            <p class="curso-descricao">
+              <span class="curso-destaque"
+                >O curso definitivo de Medicina Esportiva feito por quem
+                realmente entende do assunto.</span
+              >
+            </p>
+
+            <p>
+              Médicos formados e atuantes na melhor e maior residência médica da
+              América Latina, a Medicina do Esporte da USP, se reuniram para
+              criar o curso mais completo já feito no Brasil sobre Medicina
+              Esportiva aplicada à prática clínica. Aqui, você vai aprender:
+            </p>
+
+            <div class="curso-pontos">
+              <ol>
+                <li>
+                  Tudo sobre obesidade, desde os fundamentos fisiopatológicos
+                  até as abordagens terapêuticas mais modernas, incluindo os
+                  melhores medicamentos disponíveis hoje.
+                </li>
+                <li>
+                  Atualizações práticas e científicas sobre uso seguro e
+                  racional de fármacos no esporte.
+                </li>
+                <li>
+                  Os riscos cardiovasculares do uso indiscriminado de esteroides
+                  anabolizantes e o impacto real desses hormônios sobre o
+                  coração e o perfil lipídico.
+                </li>
+                <li>
+                  Exames de composição corporal explicados com profundidade e
+                  aplicabilidade clínica: bioimpedância, DEXA, dobras cutâneas e
+                  antropometria.
+                </li>
+                <li>
+                  E ainda: adaptações fisiológicas ao exercício, prescrição
+                  baseada em evidência para endurance, triatlo, maratona,
+                  ciclismo e muito mais.
+                </li>
+              </ol>
+            </div>
+
+            <p>
+              Se você é médico e quer dominar a Medicina do Esporte com quem
+              está na linha de frente da ciência, esse curso é para você.
+            </p>
+
+            <p>
+              <strong>📌 Vagas limitadas.</strong> Garanta agora sua matrícula e
+              leve sua prática médica a outro nível.
+            </p>
+          </div>
+          <div class="curso-footer">
+            <div class="curso-cta">
+              <a
+                href="https://guilhermeadami.com.br/curso-de-medicina-esportiva/"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+                ><i class="fas fa-graduation-cap"></i> Quero aprimorar minha
+                formação!</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Curso MACRE -->
+        <div class="curso-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="curso-header">
+            <span class="curso-tag">Formação Avançada</span>
+            <h2 class="curso-titulo">
+              🧠 Manejo Avançado da Cardiotoxicidade e Restauração do Eixo pós
+              EAA (MACRE)
+            </h2>
+            <p class="curso-subtitulo">
+              Conhecimento especializado para tratamento e reversão de efeitos
+            </p>
+          </div>
+          <div class="curso-conteudo">
+            <p>
+              <strong>Primeira aula de 1h</strong> apresentada na USP sobre
+              todos os mecanismo de agressão dos esteroides anabolizantes ao
+              coração, da expertise de médico que trabalha com atletas e possui
+              pesquisas em andamento com fisiculturistas nesta área.
+            </p>
+
+            <p>
+              <strong>Segunda aula de 1h</strong> abordando diversas
+              possibilidades farmacológicas para restauração do eixo
+              hipotálamo-hiófise-testículo em homens que optaram pelo uso de
+              esteróides anabolizantes.
+            </p>
+
+            <p>
+              <strong>Terceira aula de 1h</strong> aprofundada sobre a
+              fisiologia do eixo hipotálamo-hipófise.
+            </p>
+          </div>
+          <div class="curso-footer">
+            <div class="curso-cta">
+              <a
+                href="https://pay.kiwify.com.br/bm7DocF"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener"
+                ><i class="fas fa-graduation-cap"></i> Quero aprimorar minha
+                formação!</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credenciais Section -->
+    <section class="credenciais-section">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2>Referência em Educação Médica</h2>
+          <p>Qualidade e excelência reconhecidas</p>
+        </div>
+
+        <div class="credenciais-grid">
+          <div class="credencial-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="credencial-titulo">Curso Padrão USP</div>
+            <div class="credencial-valor">
+              <i class="fas fa-university"></i>
+            </div>
+          </div>
+
+          <div class="credencial-item" data-aos="fade-up" data-aos-delay="200">
+            <div class="credencial-titulo">Melhor avaliação Kiwify</div>
+            <div class="credencial-valor">5 estrelas</div>
+          </div>
+
+          <div class="credencial-item" data-aos="fade-up" data-aos-delay="300">
+            <div class="credencial-titulo">
+              Atualização em medicina esportiva
+            </div>
+            <div class="credencial-valor">
+              <i class="fas fa-sync"></i>
+            </div>
+          </div>
+
+          <div class="credencial-item" data-aos="fade-up" data-aos-delay="400">
+            <div class="credencial-titulo">Profissionais da USP</div>
+            <div class="credencial-valor">
+              <i class="fas fa-user-md"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img
+              src="build/img/logo-dr-joao-diniz.png"
+              alt="Logo Dr. João Diniz"
+              class="logo-white"
+              loading="lazy"
+              width="180"
+              height="180"
+            />
+          </div>
+          <div class="footer-menu">
+            <h4>Links Rápidos</h4>
+            <ul>
+              <li><a href="index.html#inicio">Início</a></li>
+              <li><a href="index.html#diferenciais">Diferenciais</a></li>
+              <li><a href="index.html#sobre">Sobre</a></li>
+              <li><a href="index.html#planos">Planos</a></li>
+              <li><a href="servicos.html">Serviços</a></li>
+              <li><a href="cursos.html">Cursos</a></li>
+              <li><a href="index.html#contato">Contato</a></li>
+            </ul>
+          </div>
+          <div class="footer-contato">
+            <h4>Contato</h4>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Av. Paulista, 2064 - 21º
+              andar - Bela Vista, São Paulo - SP, 01310-200
+            </p>
+            <p><i class="fas fa-phone-alt"></i> (11) 97086-5310</p>
+            <p><i class="fas fa-envelope"></i> doutorjoaodiniz@gmail.com</p>
+          </div>
+          <div class="footer-social">
+            <h4>Redes Sociais</h4>
+            <div class="social-links">
+              <a
+                href="https://instagram.com/dr.joaodiniz"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram do Dr. João Diniz"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="https://www.youtube.com/@dr.joaodiniz"
+                target="_blank"
+                rel="noopener"
+                aria-label="Canal do YouTube do Dr. João Diniz"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20cursos"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp do Dr. João Diniz"
+              >
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            &copy; 2025 Dr. João Diniz - Medicina do Esporte | CRM-SP 255.027.
+            Todos os direitos reservados.
+          </p>
+          <p>
+            Desenvolvido por
+            <a href="https://www.linkedin.com/in/marshallpaiva/" target="_blank"
+              >Marshall Paiva</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a
+      href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20os%20cursos"
+      class="whatsapp-button"
+      target="_blank"
+      rel="noopener"
+      aria-label="Fale com o Dr. João Diniz via WhatsApp"
+      data-aos="zoom-in"
+      data-aos-delay="800"
+      data-aos-offset="0"
+      data-aos-once="false"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top Button -->
+    <button
+      id="back-to-top"
+      class="back-to-top"
+      aria-label="Voltar ao topo da página"
+      data-aos="fade-up"
+      data-aos-delay="800"
+      data-aos-offset="0"
+      data-aos-once="false"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="build/js/script.min.js" defer></script>
+
+    <!-- Animate On Scroll Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
+
+    <!-- Schema.org para Course (JSON-LD) - Importante para SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Métodos Avançados de Controle e Remissão da Obesidade (MACRO)",
+        "description": "Curso definitivo de Medicina Esportiva feito por especialistas da USP, abordando obesidade, fármacos no esporte, riscos cardiovasculares e exames de composição corporal.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Dr. João Diniz - Medicina do Esporte",
+          "sameAs": ["https://joaodiniz.vercel.app"]
+        },
+        "offers": {
+          "@type": "Offer",
+          "category": "Educação Médica",
+          "availability": "LimitedAvailability"
+        },
+        "audience": {
+          "@type": "Audience",
+          "audienceType": "Médicos"
+        },
+        "educationalCredentialAwarded": "Certificado de Conclusão",
+        "teaches": [
+          "Medicina do Esporte",
+          "Controle de Obesidade",
+          "Farmacologia Esportiva"
+        ]
+      }
+    </script>
+
+    <!-- Script para correção de URLs de meta tags após o carregamento da página -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Inicializar AOS
+        AOS.init({
+          duration: 800,
+          easing: "ease-in-out",
+          once: true,
+          mirror: false,
+          disable: "mobile",
+        });
+
+        // Obter a URL base atual
+        const baseUrl = window.location.origin;
+
+        // Funções para corrigir URLs
+        function updateMetaContent(selector, attribute) {
+          const elements = document.querySelectorAll(selector);
+          elements.forEach((el) => {
+            const value = el.getAttribute(attribute);
+            if (value && !value.startsWith("http") && !value.startsWith("//")) {
+              // Apenas atualizar URLs relativas
+              el.setAttribute(
+                attribute,
+                baseUrl + (value.startsWith("/") ? value : "/" + value)
+              );
+            }
+          });
+        }
+
+        // Atualizar URLs nas meta tags
+        updateMetaContent('meta[property="og:image"]', "content");
+        updateMetaContent('meta[property="og:url"]', "content");
+        updateMetaContent('meta[name="twitter:image"]', "content");
+        updateMetaContent('link[rel="canonical"]', "href");
+
+        // Atualizar JSON-LD
+        const jsonLdScript = document.querySelector(
+          'script[type="application/ld+json"]'
+        );
+        if (jsonLdScript) {
+          let jsonData = JSON.parse(jsonLdScript.textContent);
+
+          // Atualizar URLs no JSON-LD
+          if (jsonData.image && !jsonData.image.startsWith("http")) {
+            jsonData.image =
+              baseUrl +
+              (jsonData.image.startsWith("/")
+                ? jsonData.image
+                : "/" + jsonData.image);
+          }
+
+          if (jsonData.url && !jsonData.url.startsWith("http")) {
+            jsonData.url =
+              baseUrl +
+              (jsonData.url.startsWith("/")
+                ? jsonData.url
+                : "/" + jsonData.url);
+          }
+
+          // Atualizar o script com os novos valores
+          jsonLdScript.textContent = JSON.stringify(jsonData, null, 2);
+        }
+      });
+    </script>
+
+    <script>
+      // Verificar se existe o objeto 'performance' e a API 'navigation'
+      if (performance && performance.navigation) {
+        // Detectar se a navegação é reload ou forward/back
+        if (performance.navigation.type === 1) {
+          // É um reload, então carregar imagens otimizadas diretamente
+          document.addEventListener("DOMContentLoaded", function () {
+            var images = document.querySelectorAll('img[loading="lazy"]');
+            for (var i = 0; i < images.length; i++) {
+              images[i].setAttribute("loading", "eager");
+            }
+          });
+        }
+      }
+
+      // Detecção e suporte para lazy loading nativo
+      if ("loading" in HTMLImageElement.prototype) {
+        document.documentElement.classList.add("lazyload-supported");
+      } else {
+        // Polyfill para lazy loading em navegadores que não suportam nativamente
+        document.addEventListener("DOMContentLoaded", function () {
+          var lazyImages = [].slice.call(
+            document.querySelectorAll('img[loading="lazy"]')
+          );
+
+          if ("IntersectionObserver" in window) {
+            let lazyImageObserver = new IntersectionObserver(function (
+              entries,
+              observer
+            ) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  let lazyImage = entry.target;
+                  lazyImage.src = lazyImage.dataset.src || lazyImage.src;
+                  lazyImage.srcset = lazyImage.dataset.srcset || "";
+                  lazyImage.classList.remove("lazy");
+                  lazyImageObserver.unobserve(lazyImage);
+                }
+              });
+            });
+
+            lazyImages.forEach(function (lazyImage) {
+              lazyImageObserver.observe(lazyImage);
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

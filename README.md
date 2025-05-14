@@ -121,7 +121,9 @@ A identidade visual segue um padrão profissional da área médica:
 
 ```
 /
-├── index.html          # Arquivo principal
+├── index.html          # Página principal
+├── servicos.html       # Página de serviços
+├── cursos.html         # Página de cursos
 ├── css/
 │   ├── style.css       # Estilos principais
 │   ├── responsive.css  # Estilos responsivos
@@ -130,20 +132,28 @@ A identidade visual segue um padrão profissional da área médica:
 ├── js/
 │   ├── script.js       # Funcionalidades JavaScript principais
 │   ├── youtube-shorts.js    # Carregador de vídeos YouTube
-│   └── carousel.js # Carrossel responsivo para vídeos
+│   ├── carousel.js     # Carrossel responsivo para vídeos
+│   └── loading.js      # Otimização de carregamento da página
 ├── build/
-│   └── js/
-│       ├── script.min.js      # JavaScript principal minificado
-│       ├── youtube-shorts.min.js   # Script de vídeos minificado
-│       ├── carousel.min.js    # Script de carrossel minificado
-│       └── loading.min.js     # Script otimizado para carregamento da página
-├── img/                # Imagens e recursos visuais
-│   ├── logo-dr-joao-diniz.png  # Logo principal (otimizada)
-│   ├── dr-joao-competicao.webp  # Foto da seção Sobre (formato WebP)
-│   ├── dr-joao-diniz.webp       # Imagem principal (formato WebP)
+│   ├── css/
+│   │   ├── style.min.css      # CSS principal minificado
+│   │   ├── responsive.min.css # CSS responsivo minificado
+│   │   ├── shorts.min.css     # CSS de vídeos minificado
+│   │   └── prices.min.css     # CSS de preços minificado
+│   ├── js/
+│   │   ├── script.min.js      # JavaScript principal minificado
+│   │   ├── youtube-shorts.min.js   # Script de vídeos minificado
+│   │   ├── carousel.min.js    # Script de carrossel minificado
+│   │   └── loading.min.js     # Script de carregamento minificado
+│   └── img/                # Imagens otimizadas
+├── img/                # Imagens e recursos visuais originais
+│   ├── logo-dr-joao-diniz.png  # Logo principal
+│   ├── dr-joao-competicao.webp  # Foto da seção Sobre
+│   ├── dr-joao-diniz.webp       # Imagem principal
 │   └── favicon.ico             # Favicon do site
 ├── robots.txt          # Instruções para crawlers
 ├── sitemap.xml         # Mapa do site para indexação
+├── package.json        # Configuração de dependências e scripts
 ├── .gitignore          # Configuração de exclusões para Git
 └── README.md           # Este arquivo
 ```
@@ -154,9 +164,26 @@ A identidade visual segue um padrão profissional da área médica:
    ```bash
    git clone https://github.com/mapsegundo/joaodiniz.git
    ```
-2. Abra o arquivo `index.html` em qualquer navegador moderno
-3. Para desenvolvimento, edite os arquivos JS na pasta `/js`
-4. Os arquivos minificados ficam em `/build/js` (gerados com Node.js)
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Para desenvolvimento, execute o servidor local:
+   ```bash
+   npm run serve
+   ```
+4. Para gerar os arquivos minificados:
+   ```bash
+   npm run build
+   ```
+5. Para minificar e otimizar as imagens:
+   ```bash
+   npm run prod
+   ```
+6. Para limpar arquivos não utilizados:
+   ```bash
+   npm run clean
+   ```
 
 ## Otimizações Recentes
 
