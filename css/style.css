@@ -497,10 +497,18 @@ textarea {
 }
 
 .inicio-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-normal);
+}
+
+.profile-image {
+  object-fit: cover;
   width: 100%;
-  border-radius: 10px;
-  border: 4px solid rgba(20, 184, 166, 0.2);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  max-height: 600px;
+  border-radius: var(--border-radius-lg);
 }
 
 .inicio-bg-shape {
