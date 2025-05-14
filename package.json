@@ -7,10 +7,14 @@
     "minify-js": "terser js/script.js -o build/js/script.min.js && terser js/youtube-shorts.js -o build/js/youtube-shorts.min.js && terser js/carousel.js -o build/js/carousel.min.js && terser js/loading.js -o build/js/loading.min.js",
     "minify-css": "cleancss -o build/css/style.min.css css/style.css && cleancss -o build/css/responsive.min.css css/responsive.css && cleancss -o build/css/shorts.min.css css/shorts.css && cleancss -o build/css/prices.min.css css/prices.css",
     "build": "npm run minify-js && npm run minify-css",
+    "vercel-build": "echo 'Pulando build na Vercel - Site estático'",
     "optimize-images": "imagemin img/* --out-dir=build/img",
     "prod": "npm run build && npm run optimize-images",
     "serve": "http-server -p 3000 -c-1",
     "clean": "rimraf build/js/include.min.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   },
   "author": "Marshall Paiva",
   "license": "UNLICENSED",
