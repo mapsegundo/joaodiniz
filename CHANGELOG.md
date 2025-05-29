@@ -12,6 +12,7 @@ e este projeto segue [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - feat: alterar valores do plano individual para R$ 600,00 em 2x de R$ 330,00
 - docs: criação do sistema de regras do Cursor para desenvolvimento estruturado
 - docs: implementação de fluxo de commits padronizados
+- docs: adicionar regras de implementação incremental e commits padronizados
 
 ### 📝 Alterado
 
