@@ -1,0 +1,77 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Implementação Incremental e Gestão de Escopo
+
+## Princípios Fundamentais
+
+### 1. Uma Funcionalidade Por Vez
+- **SEMPRE** implemente apenas uma funcionalidade específica por prompt
+- Evite tentar resolver múltiplos problemas ou implementar várias features simultaneamente
+- Foque em completar uma tarefa antes de passar para a próxima
+- Teste cada funcionalidade individualmente antes de prosseguir
+
+### 2. Divisão de Prompts Grandes
+- Se um prompt contém múltiplas solicitações, **PARE** e divida em tarefas menores
+- Identifique as dependências entre funcionalidades
+- Priorize a ordem de implementação baseada em:
+  - Dependências técnicas
+  - Impacto no usuário
+  - Complexidade de desenvolvimento
+
+### 3. Confirmação de Escopo
+- **ANTES** de gerar qualquer código, confirme:
+  - O que exatamente será implementado
+  - Quais arquivos serão modificados ou criados
+  - Se há dependências com outras funcionalidades
+  - O tempo estimado de implementação
+
+### 4. Fluxo de Trabalho Recomendado
+
+```
+1. Receber solicitação
+2. Analisar e quebrar em tarefas menores (se necessário)
+3. Confirmar escopo da primeira tarefa
+4. Implementar apenas essa tarefa
+5. Testar e validar
+6. Confirmar conclusão antes de prosseguir
+```
+
+## Exemplos de Aplicação
+
+### ❌ Prompt Problemático:
+"Implemente um sistema de login, adicione validação de formulários, crie uma dashboard e configure o roteamento"
+
+### ✅ Abordagem Correta:
+1. **Tarefa 1**: Implementar estrutura básica de login
+2. **Tarefa 2**: Adicionar validação de formulários
+3. **Tarefa 3**: Criar dashboard básica
+4. **Tarefa 4**: Configurar roteamento entre páginas
+
+## Comunicação com o Desenvolvedor
+
+### Sempre Perguntar:
+- "Vou implementar [funcionalidade específica]. Isso está correto?"
+- "Antes de prosseguir, gostaria de validar os outros itens?"
+- "Prefere que eu complete esta funcionalidade primeiro ou há prioridades diferentes?"
+
+### Sempre Informar:
+- Arquivos que serão modificados
+- Novas dependências que serão adicionadas
+- Possíveis impactos em código existente
+- Próximos passos sugeridos
+
+## Benefícios desta Abordagem
+
+- **Menor risco de bugs**: Cada funcionalidade é testada isoladamente
+- **Melhor controle**: O desenvolvedor pode direcionar o progresso
+- **Facilita debugging**: Problemas são identificados rapidamente
+- **Flexibilidade**: Permite mudanças de prioridade durante o desenvolvimento
+- **Qualidade**: Cada feature recebe atenção completa
+
+---
+
+*Esta regra garante desenvolvimento mais controlado, eficiente e com menor probabilidade de erros.*
+

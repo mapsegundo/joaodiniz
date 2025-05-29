@@ -1,0 +1,150 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Commits Padronizados - Uma Tarefa, Um Commit
+
+## Regra Fundamental
+**Cada tarefa implementada = 1 commit com mensagem padronizada**
+
+## Formato de Mensagem de Commit
+
+### Padrão Obrigatório:
+```
+feat: [ação específica realizada]
+```
+ou
+```
+fix: [problema específico resolvido]
+```
+
+## Tipos de Commit
+
+### 🆕 `feat:` - Novas Funcionalidades
+Use quando implementar:
+- Nova funcionalidade
+- Nova página
+- Novo componente
+- Nova API/endpoint
+- Nova feature de usuário
+
+**Exemplos:**
+```
+feat: adicionar formulário de contato
+feat: implementar sistema de login
+feat: criar página de dashboard
+feat: adicionar validação de email
+feat: implementar carrousel de imagens
+```
+
+### 🔧 `fix:` - Correções
+Use quando corrigir:
+- Bugs identificados
+- Problemas de performance
+- Erros de layout
+- Problemas de funcionamento
+- Correções de segurança
+
+**Exemplos:**
+```
+fix: corrigir responsividade no mobile
+fix: resolver erro de validação de formulário
+fix: ajustar alinhamento do menu
+fix: corrigir link quebrado na navegação
+fix: resolver problema de carregamento lento
+```
+
+## Fluxo de Trabalho
+
+### 1. Implementar Tarefa
+- Foque em **uma funcionalidade específica**
+- Complete toda a implementação da tarefa
+- Teste a funcionalidade implementada
+
+### 2. Preparar Commit
+- Verifique todos os arquivos modificados
+- Certifique-se que apenas arquivos relacionados à tarefa estão incluídos
+- Remova arquivos temporários ou de teste
+
+### 3. Escrever Mensagem
+- Use apenas `feat:` ou `fix:`
+- Seja específico sobre **o que foi feito**
+- Use linguagem clara e objetiva
+- Mantenha a mensagem concisa (máximo 50 caracteres)
+
+### 4. Executar Commit
+```bash
+git add .
+git commit -m "feat: [sua ação específica]"
+```
+
+## Diretrizes de Mensagem
+
+### ✅ Boas Práticas:
+- Use verbos no infinitivo
+- Seja específico sobre a ação
+- Foque no **resultado** da implementação
+- Use português claro e direto
+
+### ❌ Evite:
+- Mensagens genéricas como "feat: atualização"
+- Múltiplas ações em uma mensagem
+- Linguagem técnica excessiva
+- Abreviações desnecessárias
+
+## Exemplos Práticos
+
+### Cenário: Implementando Sistema de Login
+
+**❌ Errado:**
+```
+feat: sistema completo de autenticação
+```
+
+**✅ Correto:**
+```
+feat: criar formulário de login
+```
+*Em seguida, commits separados para:*
+```
+feat: adicionar validação de credenciais
+feat: implementar redirecionamento pós-login
+feat: criar página de logout
+```
+
+### Cenário: Corrigindo Problemas
+
+**❌ Errado:**
+```
+fix: várias correções de layout
+```
+
+**✅ Correto:**
+```
+fix: corrigir alinhamento do header
+fix: ajustar espaçamento dos botões
+fix: resolver overflow no mobile
+```
+
+## Benefícios desta Abordagem
+
+- **📋 Histórico Claro**: Cada commit representa uma mudança específica
+- **🔍 Fácil Rastreamento**: Identificação rápida de quando algo foi implementado
+- **⏪ Rollback Simples**: Reversão precisa de funcionalidades específicas
+- **👥 Colaboração**: Equipe entende facilmente as mudanças
+- **📊 Relatórios**: Geração automática de changelogs
+
+## Integração com Implementação Incremental
+
+Esta regra funciona em conjunto com [implementacao-incremental.mdc](mdc:implementacao-incremental.mdc):
+
+1. **Divida** a tarefa em funcionalidades específicas
+2. **Implemente** uma funcionalidade por vez
+3. **Faça commit** de cada funcionalidade implementada
+4. **Confirme** o resultado antes de prosseguir
+
+---
+
+*Mantenha o histórico de commits limpo e organizando - cada commit deve contar uma história específica do desenvolvimento.*
+
