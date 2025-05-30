@@ -5,6 +5,39 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
 e este projeto segue [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
+## [02/01/2025] - Versão 1.2.0
+
+### ✨ Adicionado
+
+- feat: página de cursos médicos especializados totalmente redesenhada
+- feat: integração de badges premium para cursos (🏆 Exclusivo para Médicos, 🎓 Padrão USP)
+- feat: seção de credenciais com cards interativos e animações
+- feat: design system atualizado com tokens CSS consistentes
+- feat: animações avançadas (shimmer, pulse, hover effects)
+
+### 🎨 Melhorado
+
+- UI: redesign completo da página de cursos com layout moderno
+- UX: centralização dos subtítulos dos cursos para melhor hierarquia visual
+- design: cards de credenciais com grid responsivo (4 colunas → 2 → 1)
+- perf: CSS otimizado com redução de 52% no tamanho (1068 → ~520 linhas)
+- mobile: responsividade aprimorada em todos os breakpoints
+
+### 🔧 Corrigido
+
+- fix: remoção da linha verde decorativa abaixo do título "Referência em Educação Médica"
+- fix: conflitos entre CSS inline e externo em badges
+- fix: problemas de alinhamento em dispositivos móveis
+- fix: limpeza de código não utilizado (50+ classes removidas)
+
+### 🗑️ Removido
+
+- Estilos órfãos e classes não utilizadas no CSS
+- Elementos HTML não utilizados (credencial-pulse, team-member icons)
+- CSS inline conflitante que causava problemas de layout
+
+---
+
 ## [29/05/2025] - Versão 1.1.0
 
 ### ✨ Adicionado

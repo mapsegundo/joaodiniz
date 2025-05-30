@@ -122,6 +122,12 @@
       media="print"
       onload="this.media='all'"
     />
+    <!-- CSS moderno dos cursos -->
+    <link
+      rel="stylesheet"
+      href="build/css/cursos-modern.css?v=3002"
+      media="all"
+    />
     <!-- CSS não crítico -->
     <link
       rel="stylesheet"
@@ -147,36 +153,35 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
       />
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+      <link rel="stylesheet" href="build/css/cursos-modern.css?v=3002" />
       <link rel="stylesheet" href="build/css/prices.min.css" />
     </noscript>
 
     <!-- Styles críticos inline para melhorar o First Contentful Paint -->
     <style>
-      /* Estilos críticos para a primeira renderização */
+      /* Estilos críticos mínimos */
       :root {
         --primary-color: #14b8a6;
         --primary-dark: #0f766e;
-        --primary-light: #99f6e4;
-        --text-light: #f8fafc;
         --text-dark: #0f172a;
         --text-gray: #64748b;
         --bg-gray: #f1f5f9;
-        --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-          0 2px 4px -1px rgba(0, 0, 0, 0.06);
         --font-primary: "Montserrat", sans-serif;
-        --border-radius-lg: 12px;
       }
+      
       body {
         margin: 0;
         padding: 0;
         font-family: var(--font-primary);
         line-height: 1.6;
       }
+      
       .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 1.5rem;
       }
+      
       #header {
         position: fixed;
         top: 0;
@@ -184,186 +189,11 @@
         width: 100%;
         z-index: 1000;
         background-color: rgba(255, 255, 255, 0.95);
-        box-shadow: var(--shadow-md);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
       }
 
-      /* Estilos específicos para página de cursos */
       .cursos-section {
         padding: 180px 0 80px;
-      }
-
-      .curso-card {
-        background: #fff;
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-        margin-bottom: 60px;
-        position: relative;
-      }
-
-      .curso-header {
-        background: linear-gradient(
-          135deg,
-          var(--primary-dark),
-          var(--text-dark)
-        );
-        padding: 25px 30px;
-        position: relative;
-      }
-
-      .curso-tag {
-        position: absolute;
-        top: 0;
-        right: 30px;
-        background: var(--primary-color);
-        color: #fff;
-        font-size: 0.85rem;
-        font-weight: 700;
-        padding: 5px 15px;
-        border-radius: 0 0 8px 8px;
-      }
-
-      .curso-titulo {
-        color: #fff;
-        margin: 0;
-        font-size: 1.8rem;
-        font-weight: 700;
-      }
-
-      .curso-subtitulo {
-        color: var(--primary-light);
-        margin-top: 5px;
-        font-size: 1.1rem;
-        font-weight: 500;
-      }
-
-      .curso-conteudo {
-        padding: 30px;
-      }
-
-      .curso-descricao {
-        margin-bottom: 25px;
-        font-size: 1.05rem;
-        line-height: 1.7;
-      }
-
-      .curso-destaque {
-        font-weight: 600;
-        color: var(--primary-dark);
-      }
-
-      .curso-pontos {
-        margin: 30px 0;
-      }
-
-      .curso-pontos ol {
-        padding-left: 20px;
-      }
-
-      .curso-pontos li {
-        margin-bottom: 15px;
-        position: relative;
-        padding-left: 5px;
-      }
-
-      .curso-footer {
-        background: var(--bg-gray);
-        padding: 25px 30px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-
-      .curso-cta {
-        text-align: center;
-      }
-
-      /* Estilo retangular padronizado para botões */
-      .btn {
-        display: inline-block;
-        padding: 12px 25px;
-        background-color: var(--primary-color);
-        color: var(--text-light);
-        border: none;
-        border-radius: 12px;
-        font-weight: 600;
-        text-decoration: none;
-        transition: background-color 0.3s, transform 0.2s;
-        cursor: pointer;
-        text-align: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      .btn-primary {
-        background-color: var(--primary-color);
-      }
-
-      .btn-primary:hover,
-      .btn-primary:focus {
-        background-color: var(--primary-dark);
-        transform: translateY(-2px);
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-      }
-
-      /* Seção de credenciais */
-      .credenciais-section {
-        background-color: var(--bg-gray);
-        padding: 70px 0;
-      }
-
-      .credenciais-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-      }
-
-      .credencial-item {
-        background: #fff;
-        text-align: center;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        transition: transform 0.3s ease;
-      }
-
-      .credencial-item:hover {
-        transform: translateY(-5px);
-      }
-
-      .credencial-titulo {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-        color: var(--primary-dark);
-        font-weight: 700;
-      }
-
-      .credencial-valor {
-        font-size: 1.5rem;
-        color: var(--text-dark);
-        font-weight: 600;
-      }
-
-      /* Responsividade */
-      @media (max-width: 768px) {
-        .curso-header {
-          padding: 20px;
-        }
-
-        .curso-titulo {
-          font-size: 1.5rem;
-        }
-
-        .curso-conteudo {
-          padding: 20px;
-        }
-
-        .curso-tag {
-          position: static;
-          display: inline-block;
-          margin-bottom: 10px;
-          border-radius: 4px;
-        }
       }
     </style>
 
@@ -490,130 +320,239 @@
     <section id="cursos" class="cursos-section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
+          <div class="header-badge">
+            <span class="badge-icon">🎓</span>
+            <span class="badge-text">Formação Médica de Elite</span>
+          </div>
           <h1>Cursos Médicos Especializados</h1>
           <p>Formação avançada em Medicina do Esporte com padrão USP</p>
         </div>
 
         <!-- Curso MACRO -->
-        <div class="curso-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="curso-header">
-            <span class="curso-tag">Exclusivo para Médicos</span>
-            <h2 class="curso-titulo">
-              🧠 Curso Métodos Avançados de Controle e Remissão da Obesidade
-              (MACRO)
-            </h2>
-            <p class="curso-subtitulo">Com especialistas da USP</p>
-          </div>
-          <div class="curso-conteudo">
-            <p class="curso-descricao">
-              <span class="curso-destaque"
-                >O curso definitivo de Medicina Esportiva feito por quem
-                realmente entende do assunto.</span
-              >
-            </p>
+        <div
+          class="curso-card pattern-card"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="pattern-overlay">
+            <div class="pattern-gradient">
+              <div class="curso-header">
+                <div class="curso-badges">
+                  <span class="curso-tag premium"
+                    >🏆 Exclusivo para Médicos</span
+                  >
+                  <span class="curso-tag usp">🎓 Padrão USP</span>
+                </div>
+                <h2 class="curso-titulo">
+                  <span class="titulo-icon">🧠</span>
+                  Curso Métodos Avançados de Controle e Remissão da Obesidade
+                  (MACRO)
+                </h2>
+                <p class="curso-subtitulo">Com especialistas da USP</p>
 
-            <p>
-              Médicos formados e atuantes na melhor e maior residência médica da
-              América Latina, a Medicina do Esporte da USP, se reuniram para
-              criar o curso mais completo já feito no Brasil sobre Medicina
-              Esportiva aplicada à prática clínica. Aqui, você vai aprender:
-            </p>
+                <div class="curso-stats">
+                  <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Médicos Formados</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">5⭐</div>
+                    <div class="stat-label">Avaliação</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">15h</div>
+                    <div class="stat-label">Duração</div>
+                  </div>
+                </div>
+              </div>
 
-            <div class="curso-pontos">
-              <ol>
-                <li>
-                  Tudo sobre obesidade, desde os fundamentos fisiopatológicos
-                  até as abordagens terapêuticas mais modernas, incluindo os
-                  melhores medicamentos disponíveis hoje.
-                </li>
-                <li>
-                  Atualizações práticas e científicas sobre uso seguro e
-                  racional de fármacos no esporte.
-                </li>
-                <li>
-                  Os riscos cardiovasculares do uso indiscriminado de esteroides
-                  anabolizantes e o impacto real desses hormônios sobre o
-                  coração e o perfil lipídico.
-                </li>
-                <li>
-                  Exames de composição corporal explicados com profundidade e
-                  aplicabilidade clínica: bioimpedância, DEXA, dobras cutâneas e
-                  antropometria.
-                </li>
-                <li>
-                  E ainda: adaptações fisiológicas ao exercício, prescrição
-                  baseada em evidência para endurance, triatlo, maratona,
-                  ciclismo e muito mais.
-                </li>
-              </ol>
-            </div>
+              <div class="curso-conteudo">
+                <div class="curso-highlight">
+                  <span class="highlight-text">
+                    O curso definitivo de Medicina Esportiva feito por quem
+                    realmente entende do assunto.
+                  </span>
+                </div>
 
-            <p>
-              Se você é médico e quer dominar a Medicina do Esporte com quem
-              está na linha de frente da ciência, esse curso é para você.
-            </p>
+                <p>
+                  Médicos formados e atuantes na melhor e maior residência
+                  médica da América Latina, a Medicina do Esporte da USP, se
+                  reuniram para criar o curso mais completo já feito no Brasil
+                  sobre Medicina Esportiva aplicada à prática clínica.
+                </p>
 
-            <p>
-              <strong>📌 Vagas limitadas.</strong> Garanta agora sua matrícula e
-              leve sua prática médica a outro nível.
-            </p>
-          </div>
-          <div class="curso-footer">
-            <div class="curso-cta">
-              <a
-                href="https://guilhermeadami.com.br/curso-de-medicina-esportiva/"
-                class="btn btn-primary"
-                target="_blank"
-                rel="noopener"
-                ><i class="fas fa-graduation-cap"></i> Quero aprimorar minha
-                formação!</a
-              >
+                <div class="curso-features">
+                  <h4>🎯 O que você vai aprender:</h4>
+                  <div class="features-grid">
+                    <div class="feature-item">
+                      <div class="feature-icon">🔬</div>
+                      <div class="feature-content">
+                        <strong>Obesidade Completa</strong>
+                        <p>
+                          Fundamentos fisiopatológicos até abordagens
+                          terapêuticas modernas
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="feature-item">
+                      <div class="feature-icon">💊</div>
+                      <div class="feature-content">
+                        <strong>Farmacologia Esportiva</strong>
+                        <p>
+                          Uso seguro e racional de fármacos no esporte com
+                          evidências
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="feature-item">
+                      <div class="feature-icon">❤️</div>
+                      <div class="feature-content">
+                        <strong>Riscos Cardiovasculares</strong>
+                        <p>
+                          Impacto real dos esteroides sobre coração e perfil
+                          lipídico
+                        </p>
+                      </div>
+                    </div>
+
+                    <div class="feature-item">
+                      <div class="feature-icon">📊</div>
+                      <div class="feature-content">
+                        <strong>Exames de Composição</strong>
+                        <p>
+                          Bioimpedância, DEXA, dobras cutâneas e antropometria
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="curso-guarantee">
+                  <div class="guarantee-icon">🛡️</div>
+                  <div class="guarantee-text">
+                    <strong>Garantia de Qualidade USP</strong>
+                    <p>
+                      Vagas limitadas • Certificado de conclusão • Suporte
+                      completo
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="curso-footer">
+                <div class="curso-cta">
+                  <a
+                    href="https://guilhermeadami.com.br/curso-de-medicina-esportiva/"
+                    class="btn-modern btn-primary-shine"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <span class="btn-icon">🎓</span>
+                    <span class="btn-text">Quero me Especializar Agora</span>
+                    <div class="btn-shine"></div>
+                  </a>
+
+                  <div class="cta-secondary">
+                    <div class="urgency-text">⚡ Últimas vagas disponíveis</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <!-- Curso MACRE -->
-        <div class="curso-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="curso-header">
-            <span class="curso-tag">Formação Avançada</span>
-            <h2 class="curso-titulo">
-              🧠 Manejo Avançado da Cardiotoxicidade e Restauração do Eixo pós
-              EAA (MACRE)
-            </h2>
-            <p class="curso-subtitulo">
-              Conhecimento especializado para tratamento e reversão de efeitos
-            </p>
-          </div>
-          <div class="curso-conteudo">
-            <p>
-              <strong>Primeira aula de 1h</strong> apresentada na USP sobre
-              todos os mecanismo de agressão dos esteroides anabolizantes ao
-              coração, da expertise de médico que trabalha com atletas e possui
-              pesquisas em andamento com fisiculturistas nesta área.
-            </p>
+        <div
+          class="curso-card pattern-card"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="pattern-overlay">
+            <div class="pattern-gradient">
+              <div class="curso-header">
+                <div class="curso-badges">
+                  <span class="curso-tag advanced">🚀 Formação Avançada</span>
+                  <span class="curso-tag research">🔬 Baseado em Pesquisa</span>
+                </div>
+                <h2 class="curso-titulo">
+                  <span class="titulo-icon">🧠</span>
+                  Manejo Avançado da Cardiotoxicidade e Restauração do Eixo pós
+                  EAA (MACRE)
+                </h2>
+                <p class="curso-subtitulo">
+                  Conhecimento especializado para tratamento e reversão de
+                  efeitos
+                </p>
 
-            <p>
-              <strong>Segunda aula de 1h</strong> abordando diversas
-              possibilidades farmacológicas para restauração do eixo
-              hipotálamo-hiófise-testículo em homens que optaram pelo uso de
-              esteróides anabolizantes.
-            </p>
+                <div class="curso-stats">
+                  <div class="stat-item">
+                    <div class="stat-number">3h</div>
+                    <div class="stat-label">Duração Total</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label">Módulos</div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-number">USP</div>
+                    <div class="stat-label">Apresentado</div>
+                  </div>
+                </div>
+              </div>
 
-            <p>
-              <strong>Terceira aula de 1h</strong> aprofundada sobre a
-              fisiologia do eixo hipotálamo-hipófise.
-            </p>
-          </div>
-          <div class="curso-footer">
-            <div class="curso-cta">
-              <a
-                href="https://pay.kiwify.com.br/bm7DocF"
-                class="btn btn-primary"
-                target="_blank"
-                rel="noopener"
-                ><i class="fas fa-graduation-cap"></i> Quero aprimorar minha
-                formação!</a
-              >
+              <div class="curso-conteudo">
+                <div class="modulos-grid">
+                  <div class="modulo-item">
+                    <div class="modulo-number">01</div>
+                    <div class="modulo-content">
+                      <strong>Cardiotoxicidade (1h)</strong>
+                      <p>
+                        Mecanismos de agressão dos esteroides anabolizantes ao
+                        coração, apresentado na USP
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="modulo-item">
+                    <div class="modulo-number">02</div>
+                    <div class="modulo-content">
+                      <strong>Restauração do Eixo (1h)</strong>
+                      <p>
+                        Possibilidades farmacológicas para restauração do eixo
+                        hipotálamo-hipófise-testículo
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="modulo-item">
+                    <div class="modulo-number">03</div>
+                    <div class="modulo-content">
+                      <strong>Fisiologia Avançada (1h)</strong>
+                      <p>
+                        Aprofundamento sobre a fisiologia do eixo
+                        hipotálamo-hipófise
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="curso-footer">
+                <div class="curso-cta">
+                  <a
+                    href="https://pay.kiwify.com.br/bm7DocF"
+                    class="btn-modern btn-secondary-glow"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    <span class="btn-icon">🎯</span>
+                    <span class="btn-text">Acessar Curso Especializado</span>
+                    <div class="btn-glow"></div>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -624,40 +563,86 @@
     <section class="credenciais-section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
+          <div class="header-badge">
+            <span class="badge-icon">🏆</span>
+            <span class="badge-text">Excelência Reconhecida</span>
+          </div>
           <h2>Referência em Educação Médica</h2>
-          <p>Qualidade e excelência reconhecidas</p>
+          <p>Qualidade e excelência reconhecidas pela comunidade médica</p>
         </div>
 
         <div class="credenciais-grid">
-          <div class="credencial-item" data-aos="fade-up" data-aos-delay="100">
-            <div class="credencial-titulo">Curso Padrão USP</div>
-            <div class="credencial-valor">
+          <div
+            class="credencial-card premium"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="credencial-icon">
               <i class="fas fa-university"></i>
             </div>
-          </div>
-
-          <div class="credencial-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="credencial-titulo">Melhor avaliação Kiwify</div>
-            <div class="credencial-valor">5 estrelas</div>
-          </div>
-
-          <div class="credencial-item" data-aos="fade-up" data-aos-delay="300">
-            <div class="credencial-titulo">
-              Atualização em medicina esportiva
-            </div>
-            <div class="credencial-valor">
-              <i class="fas fa-sync"></i>
+            <div class="credencial-content">
+              <div class="credencial-titulo">Padrão USP</div>
+              <div class="credencial-desc">
+                Formação com qualidade da melhor universidade da América Latina
+              </div>
             </div>
           </div>
 
-          <div class="credencial-item" data-aos="fade-up" data-aos-delay="400">
-            <div class="credencial-titulo">Profissionais da USP</div>
-            <div class="credencial-valor">
+          <div
+            class="credencial-card rating"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="credencial-icon">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+            <div class="credencial-content">
+              <div class="credencial-titulo">Avaliação 5 Estrelas</div>
+              <div class="credencial-desc">
+                Melhor avaliação na plataforma Kiwify pelos alunos
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="credencial-card update"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="credencial-icon">
+              <i class="fas fa-sync-alt"></i>
+            </div>
+            <div class="credencial-content">
+              <div class="credencial-titulo">Sempre Atualizado</div>
+              <div class="credencial-desc">
+                Conteúdo constantemente atualizado com as mais recentes
+                evidências
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="credencial-card team"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="credencial-icon">
               <i class="fas fa-user-md"></i>
+            </div>
+            <div class="credencial-content">
+              <div class="credencial-titulo">Time de Elite</div>
+              <div class="credencial-desc">
+                Profissionais formados na USP com vasta experiência prática
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
 
     <!-- Footer -->

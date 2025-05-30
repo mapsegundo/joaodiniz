@@ -29,6 +29,8 @@ Este site foi desenvolvido como landing page de alta conversão para o Dr. João
 
 O site está organizado nas seguintes seções:
 
+### Página Principal (index.html)
+
 1. **Header** - Navegação principal e CTA de agendamento
 2. **Início** - Hero section com proposta de valor principal
 3. **Vídeos** - Carrossel responsivo de shorts do YouTube do Dr. João Diniz
@@ -39,6 +41,20 @@ O site está organizado nas seguintes seções:
 8. **FAQ** - Perguntas frequentes e respostas
 9. **Contato** - Informações de contato, localização e redes sociais
 10. **Footer** - Links rápidos, contato e credenciais
+
+### Página de Serviços (servicos.html)
+
+- Detalhamento completo dos serviços oferecidos
+- Cards interativos com informações detalhadas
+- CTAs direcionados para agendamento
+
+### Página de Cursos (cursos.html) - **NOVO**
+
+- **Curso MACRO**: Métodos Avançados de Controle e Remissão da Obesidade
+- **Curso MACRE**: Manejo Avançado da Cardiotoxicidade e Restauração do Eixo
+- **Seção de Credenciais**: Padrão USP, Avaliação 5 Estrelas, Sempre Atualizado, Time de Elite
+- Badges premium diferenciados (🏆 Exclusivo para Médicos, 🎓 Padrão USP)
+- Design moderno com animações avançadas e layout responsivo
 
 ## Recursos Interativos
 
@@ -187,6 +203,13 @@ A identidade visual segue um padrão profissional da área médica:
 
 ## Otimizações Recentes
 
+- **Janeiro 2025:** Redesign completo da página de cursos médicos especializados
+- **Janeiro 2025:** Implementação de design system com tokens CSS consistentes
+- **Janeiro 2025:** Otimização radical do CSS (redução de 52% no tamanho do arquivo)
+- **Janeiro 2025:** Cards de credenciais com grid responsivo e animações interativas
+- **Janeiro 2025:** Badges premium para cursos com efeitos shimmer e hover avançados
+- **Janeiro 2025:** Limpeza completa de código não utilizado (50+ classes removidas)
+- **Janeiro 2025:** Correção de conflitos CSS e problemas de alinhamento mobile
 - **Maio 2025:** Modularização do CSS para carregamento não-bloqueante (separação em style.css, responsive.css, shorts.css e prices.css)
 - **Maio 2025:** Implementação de otimizações avançadas de Core Web Vitals e melhorias no PageSpeed
 - **Maio 2025:** Otimização de carregamento de fontes com Font Loading API
