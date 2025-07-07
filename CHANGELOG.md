@@ -5,10 +5,14 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
 e este projeto segue [Semantic Versioning](https://semver.org/lang/pt-BR/).
 
-## [31/05/2025] - Versão 1.4.0
+## [02/01/2025] - Versão 1.4.0
 
 ### ✨ Adicionado
 
+- **Nova estrutura de planos** com modalidades mensais de cobrança
+- **Plano Premium** (R$ 550,00/mês) - Acompanhamento completo médico + treinador
+- **Seção de consulta avulsa** destacada separadamente
+- Design responsivo aprimorado para a seção de planos
 - feat: página de cursos médicos especializados totalmente redesenhada
 - feat: integração de badges premium para cursos (🏆 Exclusivo para Médicos, 🎓 Padrão USP)
 - feat: seção de credenciais com cards interativos e animações
@@ -35,6 +39,42 @@ e este projeto segue [Semantic Versioning](https://semver.org/lang/pt-BR/).
 - Estilos órfãos e classes não utilizadas no CSS
 - Elementos HTML não utilizados (credencial-pulse, team-member icons)
 - CSS inline conflitante que causava problemas de layout
+
+### 🔄 Alterado
+
+- **Reestruturação completa dos planos de acompanhamento:**
+  - Plano Premium: R$ 550,00/mês (Médico + Treinador) - antes "Plano Performance" R$ 1.185,00
+  - Plano Black: R$ 450,00/mês (Apenas Médico) - antes R$ 1.185,00
+  - Plano Básico: R$ 350,00/mês (Médico + Treinador Online) - antes "Plano Individual"
+  - Consulta Médica Avulsa: mantida em R$ 600,00
+- **Características dos novos planos:**
+  - Premium: Suporte full-time WhatsApp, 2 consultas médicas + 2 consultas treinador a cada 60 dias
+  - Black: Suporte full-time WhatsApp, 2 consultas médicas a cada 60 dias, bioimpedância incluída
+  - Básico: Suporte via e-mail 1x/mês, 2 consultas online (médico + treinador) a cada 60 dias
+- **Links de WhatsApp** atualizados para refletir os novos preços e planos
+
+### 🎨 Design
+
+- **CSS otimizado** da página de cursos com design system unificado
+- **Badges premium** com ícones para credenciais dos cursos
+- **Seção de credenciais** responsiva (4→2→1 colunas)
+- **Animações avançadas** (shimmer, pulse, hover effects)
+- **Remoção de elementos órfãos** e CSS conflitante
+
+### 🐛 Corrigido
+
+- **Badges dos cursos** agora estão centralizados corretamente
+- **Elementos visuais** alinhados em todas as seções
+- **CSS conflitante** removido (inline vs externo)
+- **Linha verde decorativa** removida conforme solicitado
+- **50+ classes CSS** não utilizadas removidas
+- **Redução de 52%** no tamanho do CSS (1068 → ~520 linhas)
+
+### 🚀 Performance
+
+- **Cache-busting** implementado (v=3002) para CSS
+- **Código otimizado** com remoção de dependências desnecessárias
+- **Grid responsivo** aprimorado para melhor performance em dispositivos móveis
 
 ---
 
