@@ -140,13 +140,7 @@
     <!-- CSS não crítico -->
     <link
       rel="stylesheet"
-      href="build/css/shorts.min.css"
-      media="print"
-      onload="this.media='all'"
-    />
-    <link
-      rel="stylesheet"
-      href="build/css/prices.min.css"
+      href="build/css/prices.min.css?v=1.0.1"
       media="print"
       onload="this.media='all'"
     />
@@ -168,8 +162,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css"
       />
       <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-      <link rel="stylesheet" href="build/css/shorts.min.css" />
-      <link rel="stylesheet" href="build/css/prices.min.css" />
+      <link rel="stylesheet" href="build/css/prices.min.css?v=1.0.1" />
     </noscript>
 
     <!-- Styles críticos inline para melhorar o First Contentful Paint -->
@@ -177,6 +170,7 @@
       /* Estilos críticos para a primeira renderização */
       :root {
         --primary-color: #14b8a6;
+        --primary-light: #99f6e4;
         --primary-dark: #0f766e;
         --text-light: #f8fafc;
         --text-dark: #0f172a;
@@ -306,15 +300,15 @@
                 <a href="#inicio" aria-label="Ir para seção início">Início</a>
               </li>
               <li>
+                <a href="#planos" aria-label="Ir para seção planos">Planos</a>
+              </li>
+              <li>
                 <a href="#diferenciais" aria-label="Ir para seção diferenciais"
                   >Diferenciais</a
                 >
               </li>
               <li>
                 <a href="#sobre" aria-label="Ir para seção sobre">Sobre</a>
-              </li>
-              <li>
-                <a href="#planos" aria-label="Ir para seção planos">Planos</a>
               </li>
               <li>
                 <a href="servicos.html" aria-label="Ir para página de serviços"
@@ -329,7 +323,7 @@
             </ul>
             <div class="header-cta mobile-cta">
               <a
-                href="https://wa.me/5511912250610?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta"
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta"
                 class="btn btn-primary"
                 target="_blank"
                 rel="noopener"
@@ -340,7 +334,7 @@
           </nav>
           <div class="header-cta desktop-cta">
             <a
-              href="https://wa.me/5511912250610?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta"
+              href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20consulta"
               class="btn btn-primary"
               target="_blank"
               rel="noopener"
@@ -385,7 +379,7 @@
                 ><i class="fas fa-list-check"></i> Ver Programa Completo</a
               >
               <a
-                href="https://wa.me/5511912250610?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação"
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20uma%20avaliação"
                 class="btn btn-secondary"
                 target="_blank"
                 ><i class="fas fa-calendar-check"></i> Agende sua Avaliação</a
@@ -408,29 +402,235 @@
       <div class="inicio-bg-shape"></div>
     </section>
 
-    <!-- Vídeos Section -->
-    <section id="videos" class="shorts-section">
+    <!-- Planos Section -->
+    <section id="planos" class="planos-section">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <h2>Saúde e Performance com Base Científica</h2>
-          <p>Conteúdo exclusivo sobre saúde e performance</p>
+          <h2>Meus Planos</h2>
+          <p>Invista em sua saúde e transformação</p>
         </div>
-        <div class="shorts-grid">
-          <!-- Os shorts serão carregados dinamicamente aqui -->
-          <div class="shorts-loading">
-            <div class="loading-spinner"></div>
-            <p>Carregando vídeos...</p>
+        <div class="planos-cards">
+          <div
+            class="plano-card destaque"
+            data-aos="flip-left"
+            data-aos-delay="100"
+          >
+            <div class="plano-header">
+              <div class="plano-icon">
+                <i class="fas fa-crown"></i>
+              </div>
+              <h3>Plano Premium</h3>
+              <div class="plano-subtitle">Médico + Treinador</div>
+            </div>
+            <p>
+              Para homens que exigem o melhor da medicina de performance, com
+              acompanhamento médico e de treinamento completo.
+            </p>
+            <div class="plano-preco">
+              <span>Investimento</span>
+              <strong class="valor-entrada-value">2x R$ 550,00</strong>
+              <div class="plano-parcelamento">
+                <span class="parcelas-destaque">Total: R$ 1.100,00</span>
+              </div>
+            </div>
+            <ul class="plano-features">
+              <li>
+                <i class="fas fa-check-circle"></i> Suporte full-time via
+                WhatsApp
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Ajuste de planejamento
+                sempre que necessário
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Pelo menos 2 Consultas
+                médica (a cada 60 dias)
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Duas Consulta com treinador
+                (a cada 60 dias)
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Avaliação por bioimpedancia
+                e antropometria incluídas
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Prescrição precisa e segura
+                para máxima performance
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Estratégias de emagrecimento
+                e hipertrofia com suplementação e farmacologia avançada
+              </li>
+            </ul>
+            <div class="plano-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20Plano%20Premium%20(2x%20R$%20550%2C00)"
+                class="btn btn-primary"
+                target="_blank"
+                ><i class="fas fa-calendar-check"></i> Agendar Consulta</a
+              >
+            </div>
+          </div>
+          <div class="plano-card" data-aos="flip-left" data-aos-delay="200">
+            <div class="plano-header">
+              <div class="plano-icon">
+                <i class="fas fa-user-md"></i>
+              </div>
+              <h3>Plano Black</h3>
+              <div class="plano-subtitle">Apenas Médico</div>
+            </div>
+            <p>
+              Acompanhamento médico especializado em performance e emagrecimento
+              com foco exclusivo na parte médica.
+            </p>
+            <div class="plano-preco">
+              <span>Investimento</span>
+              <strong>2x R$ 450,00</strong>
+              <div class="plano-parcelamento">Total: R$ 900,00</div>
+            </div>
+            <ul class="plano-features">
+              <li>
+                <i class="fas fa-check-circle"></i> Suporte full-time via
+                WhatsApp
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Ajuste de planejamento
+                sempre que necessário
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> 2 Consultas médica (a cada
+                60 dias)
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Avaliação por bioimpedancia
+                e antropometria incluídas
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Estratégias de emagrecimento
+                e ganho de massa magra
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Prescrição médica
+                especializada
+              </li>
+              <li>
+                <i class="fas fa-info-circle"></i> Ideal para quem quer
+                acompanhamento médico especializado
+              </li>
+            </ul>
+            <div class="plano-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20Plano%20Black%20(2x%20R$%20450%2C00)"
+                class="btn btn-secondary"
+                target="_blank"
+                ><i class="fas fa-calendar-check"></i> Marcar Consulta</a
+              >
+            </div>
+          </div>
+          <div class="plano-card" data-aos="flip-left" data-aos-delay="300">
+            <div class="plano-header">
+              <div class="plano-icon">
+                <i class="fas fa-dumbbell"></i>
+              </div>
+              <h3>Plano Básico</h3>
+              <div class="plano-subtitle">Médico + Treinador</div>
+            </div>
+            <p>
+              Plano alimentar, treino, cardios, suplementação e fármacos
+              personalizado para 90 dias com possibilidade de um ajuste no
+              período.
+            </p>
+            <div class="plano-preco">
+              <span>Investimento</span>
+              <strong>3x R$ 300,00</strong>
+              <div class="plano-parcelamento">Total: R$ 900,00</div>
+            </div>
+            <ul class="plano-features">
+              <li>
+                <i class="fas fa-check-circle"></i> Suporte via e-mail com um
+                ajuste da dieta e do treino no período de 90 dias
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> 2 Consultas médica online
+                (primeira e retorno em 90 dias)
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> 1 Consulta online com
+                treinador
+              </li>
+              <li>
+                <i class="fas fa-check-circle"></i> Plano alimentar, treino,
+                cardios, suplementação e fármacos personalizado
+              </li>
+              <li>
+                <i class="fas fa-info-circle"></i> Ideal para quem quer começar
+                sua transformação com segurança e eficiência
+              </li>
+            </ul>
+            <div class="plano-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20Plano%20B%C3%A1sico%20(3x%20R$%20300%2C00)"
+                class="btn btn-secondary"
+                target="_blank"
+                ><i class="fas fa-calendar-check"></i> Marcar Consulta</a
+              >
+            </div>
           </div>
         </div>
-        <div class="shorts-cta" data-aos="fade-up" data-aos-delay="400">
-          <a
-            href="https://www.youtube.com/@dr.joaodiniz/shorts"
-            class="btn btn-secondary"
-            target="_blank"
-            rel="noopener"
+
+        <!-- Consulta Avulsa -->
+        <div class="consulta-avulsa-section" style="margin-top: 3rem">
+          <div class="section-header" data-aos="fade-up">
+            <h3>Consulta Médica Avulsa</h3>
+            <p>Avaliação única para definição do melhor plano</p>
+          </div>
+          <div
+            class="consulta-avulsa-card"
+            data-aos="fade-up"
+            data-aos-delay="100"
+            style="
+              max-width: 500px;
+              margin: 0 auto;
+              background-color: #ffffff;
+              border-radius: 12px;
+              padding: 2rem;
+              text-align: center;
+              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            "
           >
-            <i class="fab fa-youtube"></i> Ver mais vídeos
-          </a>
+            <div class="plano-header">
+              <div class="plano-icon">
+                <i class="fas fa-stethoscope"></i>
+              </div>
+              <h4>Consulta Individual</h4>
+              <div class="plano-subtitle">Atendimento Médico Especializado</div>
+            </div>
+            <div class="plano-preco">
+              <span>Investimento</span>
+              <strong>R$ 600,00</strong>
+              <div class="plano-parcelamento">À vista ou parcelado</div>
+            </div>
+            <ul class="plano-features">
+              <li>
+                <i class="fas fa-check-circle"></i> Avaliação corporal completa
+              </li>
+              <li><i class="fas fa-check-circle"></i> Bioimpedância</li>
+              <li><i class="fas fa-check-circle"></i> Antropometria</li>
+              <li>
+                <i class="fas fa-check-circle"></i> Definição do melhor plano de
+                acompanhamento na consulta
+              </li>
+            </ul>
+            <div class="plano-cta">
+              <a
+                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20na%20Consulta%20M%C3%A9dica%20Avulsa%20(R$%20600%2C00)"
+                class="btn btn-secondary"
+                target="_blank"
+                ><i class="fas fa-calendar-check"></i> Marcar Consulta</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -573,241 +773,6 @@
                 <i class="fas fa-medal"></i>
                 <span>Padrão USP</span>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Planos Section -->
-    <section id="planos" class="planos-section">
-      <div class="container">
-        <div class="section-header" data-aos="fade-up">
-          <h2>Meus Planos</h2>
-          <p>Invista em sua saúde e transformação</p>
-        </div>
-        <div class="planos-cards">
-          <div
-            class="plano-card destaque"
-            data-aos="flip-left"
-            data-aos-delay="100"
-          >
-            <div class="plano-header">
-              <div class="plano-icon">
-                <i class="fas fa-crown"></i>
-              </div>
-              <h3>Plano Premium</h3>
-              <div class="plano-subtitle">Médico + Treinador</div>
-            </div>
-            <p>
-              Para homens que exigem o melhor da medicina de performance, com
-              acompanhamento médico e de treinamento completo.
-            </p>
-            <div class="plano-preco">
-              <span>Investimento Mensal</span>
-              <strong class="valor-entrada-value">R$ 550,00</strong>
-              <div class="plano-parcelamento">
-                <span class="parcelas-destaque">Plano Mensal</span>
-              </div>
-            </div>
-            <ul class="plano-features">
-              <li>
-                <i class="fas fa-check-circle"></i> Suporte full-time via
-                WhatsApp
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Ajuste de planejamento
-                sempre que necessário
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Pelo menos 2 Consultas
-                médica (a cada 60 dias)
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Duas Consulta com treinador
-                (a cada 60 dias)
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Avaliação por bioimpedancia
-                e antropometria incluídas
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Prescrição precisa e segura
-                para máxima performance
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Estratégias de emagrecimento
-                e hipertrofia com suplementação e farmacologia avançada
-              </li>
-            </ul>
-            <div class="plano-cta">
-              <a
-                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20Plano%20Premium%20(R$%20550%2C00/m%C3%AAs)"
-                class="btn btn-primary"
-                target="_blank"
-                ><i class="fas fa-calendar-check"></i> Agendar Consulta</a
-              >
-            </div>
-          </div>
-          <div class="plano-card" data-aos="flip-left" data-aos-delay="200">
-            <div class="plano-header">
-              <div class="plano-icon">
-                <i class="fas fa-user-md"></i>
-              </div>
-              <h3>Plano Black</h3>
-              <div class="plano-subtitle">Apenas Médico</div>
-            </div>
-            <p>
-              Acompanhamento médico especializado em performance e emagrecimento
-              com foco exclusivo na parte médica.
-            </p>
-            <div class="plano-preco">
-              <span>Investimento Mensal</span>
-              <strong>R$ 450,00</strong>
-              <div class="plano-parcelamento">Plano Mensal</div>
-            </div>
-            <ul class="plano-features">
-              <li>
-                <i class="fas fa-check-circle"></i> Suporte full-time via
-                WhatsApp
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Ajuste de planejamento
-                sempre que necessário
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> 2 Consultas médica (a cada
-                60 dias)
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Avaliação por bioimpedancia
-                e antropometria incluídas
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Estratégias de emagrecimento
-                e ganho de massa magra
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Prescrição médica
-                especializada
-              </li>
-              <li>
-                <i class="fas fa-info-circle"></i> Ideal para quem quer
-                acompanhamento médico especializado
-              </li>
-            </ul>
-            <div class="plano-cta">
-              <a
-                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20Plano%20Black%20(R$%20450%2C00/m%C3%AAs)"
-                class="btn btn-secondary"
-                target="_blank"
-                ><i class="fas fa-calendar-check"></i> Marcar Consulta</a
-              >
-            </div>
-          </div>
-          <div class="plano-card" data-aos="flip-left" data-aos-delay="300">
-            <div class="plano-header">
-              <div class="plano-icon">
-                <i class="fas fa-dumbbell"></i>
-              </div>
-              <h3>Plano Básico</h3>
-              <div class="plano-subtitle">Médico + Treinador</div>
-            </div>
-            <p>
-              O essencial para quem quer começar sua transformação com
-              acompanhamento médico e de treinamento online.
-            </p>
-            <div class="plano-preco">
-              <span>Investimento Mensal</span>
-              <strong>R$ 350,00</strong>
-              <div class="plano-parcelamento">Plano Mensal</div>
-            </div>
-            <ul class="plano-features">
-              <li>
-                <i class="fas fa-check-circle"></i> Suporte via e-mail 1x/mês
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Prescrição do planejamento
-                para 60 dias
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> 2 Consultas médica online (a
-                cada 60 dias)
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> 2 Consultas com treinador
-                online (a cada 60 dias)
-              </li>
-              <li>
-                <i class="fas fa-check-circle"></i> Plano alimentar e de treino
-                personalizado
-              </li>
-              <li>
-                <i class="fas fa-info-circle"></i> Ideal para quem quer começar
-                sua transformação com segurança e eficiência
-              </li>
-            </ul>
-            <div class="plano-cta">
-              <a
-                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20no%20Plano%20B%C3%A1sico%20(R$%20350%2C00/m%C3%AAs)"
-                class="btn btn-secondary"
-                target="_blank"
-                ><i class="fas fa-calendar-check"></i> Marcar Consulta</a
-              >
-            </div>
-          </div>
-        </div>
-
-        <!-- Consulta Avulsa -->
-        <div class="consulta-avulsa-section" style="margin-top: 3rem">
-          <div class="section-header" data-aos="fade-up">
-            <h3>Consulta Médica Avulsa</h3>
-            <p>Avaliação única para definição do melhor plano</p>
-          </div>
-          <div
-            class="consulta-avulsa-card"
-            data-aos="fade-up"
-            data-aos-delay="100"
-            style="
-              max-width: 500px;
-              margin: 0 auto;
-              background-color: #ffffff;
-              border-radius: 12px;
-              padding: 2rem;
-              text-align: center;
-              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            "
-          >
-            <div class="plano-header">
-              <div class="plano-icon">
-                <i class="fas fa-stethoscope"></i>
-              </div>
-              <h4>Consulta Individual</h4>
-              <div class="plano-subtitle">Atendimento Médico Especializado</div>
-            </div>
-            <div class="plano-preco">
-              <span>Investimento</span>
-              <strong>R$ 600,00</strong>
-              <div class="plano-parcelamento">À vista ou parcelado</div>
-            </div>
-            <ul class="plano-features">
-              <li>
-                <i class="fas fa-check-circle"></i> Avaliação corporal completa
-              </li>
-              <li><i class="fas fa-check-circle"></i> Bioimpedância</li>
-              <li><i class="fas fa-check-circle"></i> Antropometria</li>
-              <li>
-                <i class="fas fa-check-circle"></i> Definição do melhor plano de
-                acompanhamento na consulta
-              </li>
-            </ul>
-            <div class="plano-cta">
-              <a
-                href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20tenho%20interesse%20na%20Consulta%20M%C3%A9dica%20Avulsa%20(R$%20600%2C00)"
-                class="btn btn-secondary"
-                target="_blank"
-                ><i class="fas fa-calendar-check"></i> Marcar Consulta</a
-              >
             </div>
           </div>
         </div>
@@ -1086,7 +1051,7 @@
 
     <!-- WhatsApp Button -->
     <a
-      href="https://wa.me/5511912250610?text=Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas"
+      href="https://wa.me/5511970865310?text=Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20as%20consultas"
       class="whatsapp-button"
       target="_blank"
       rel="noopener"
@@ -1114,7 +1079,6 @@
 
     <!-- Scripts -->
     <script src="build/js/script.min.js" defer></script>
-    <script src="build/js/youtube-shorts.min.js" defer></script>
     <script src="build/js/carousel.min.js" defer></script>
     <!-- Animate On Scroll Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
